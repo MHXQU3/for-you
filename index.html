@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Dancing+Script:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ambient floating petals -->
+<div class="petals" id="petals" aria-hidden="true"></div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow" id="hero-eyebrow"></p>
+    <h1 class="hero-title" id="hero-title"></h1>
+    <p class="hero-sub" id="hero-sub"></p>
+    <button class="scroll-cue" id="scroll-cue" aria-label="Scroll to begin">
+      <span>begin our story</span>
+      <svg width="14" height="22" viewBox="0 0 14 22" fill="none">
+        <path d="M7 1V21M7 21L1 15M7 21L13 15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+</section>
+
+<!-- ============ TIMELINE ============ -->
+<section class="timeline" id="timeline">
+  <h2 class="section-title reveal">a year, in moments</h2>
+  <div class="timeline-track" id="timeline-track"></div>
+</section>
+
+<!-- ============ ENVELOPE / LETTER ============ -->
+<section class="letter-section" id="letter-section">
+  <h2 class="section-title reveal">something I wrote for you</h2>
+  <p class="section-hint reveal">tap the envelope</p>
+
+  <div class="envelope-wrap reveal">
+    <button class="envelope" id="envelope" aria-label="Open the letter">
+      <div class="envelope-back"></div>
+      <div class="envelope-letter-peek"></div>
+      <div class="envelope-flap"></div>
+      <div class="envelope-seal">
+        <svg viewBox="0 0 40 40" width="30" height="30"><path d="M20 4 L24 15 L36 15 L26 22 L30 33 L20 26 L10 33 L14 22 L4 15 L16 15 Z" fill="currentColor"/></svg>
+      </div>
+    </button>
+  </div>
+</section>
+
+<!-- letter modal -->
+<div class="letter-modal" id="letter-modal" aria-hidden="true">
+  <div class="letter-modal-backdrop" id="letter-backdrop"></div>
+  <div class="letter-paper" role="dialog" aria-modal="true" aria-label="Letter">
+    <button class="letter-close" id="letter-close" aria-label="Close letter">&times;</button>
+    <div class="letter-song-tag" id="letter-song-tag"></div>
+    <div class="letter-body" id="letter-body"></div>
+  </div>
+</div>
+
+<!-- ============ GAME ============ -->
+<section class="game-section" id="game-section">
+  <h2 class="section-title reveal">one more thing</h2>
+  <p class="section-hint reveal">a little game — find every pair</p>
+
+  <div class="game-status reveal">
+    <span id="game-moves">Moves: 0</span>
+    <span id="game-win" class="game-win"></span>
+    <button class="game-reset" id="game-reset">restart</button>
+  </div>
+
+  <div class="game-board" id="game-board"></div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <p class="footer-script">happy birthday, my love</p>
+  <p class="footer-fine">made with a whole year of loving you</p>
+</footer>
+
+<!-- fixed music indicator -->
+<div class="now-playing" id="now-playing" aria-hidden="true">
+  <span class="now-playing-note">&#9835;</span>
+  <span class="now-playing-title" id="now-playing-title"></span>
+  <button class="now-playing-pause" id="now-playing-pause" aria-label="Pause music">❚❚</button>
+</div>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
