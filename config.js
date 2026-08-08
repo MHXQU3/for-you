@@ -3,8 +3,9 @@
    You don't need to touch any other file to customize the site.
    ============================================================ */
 
-const SITE_CONFIG = {
+window.SITE_CONFIG = {
 
+  
   // ---- Hero section ----
   herNames: "Menna",              // e.g. "Sarah & Tom" — shown big on the landing screen
   heroLine: "one year of you",  // small line under the names
@@ -75,7 +76,7 @@ const SITE_CONFIG = {
     songTitle: "Song title — Artist",
     body: [
       "To my Menna,",
-      "Happy birthday, my love. ❤️",
+      "Happy birthday, my love",
       "I have been sat here for a while trying to figure out how you write a birthday letter to someone who, somehow, became one of the most important people in your entire life.",
       "Because when I think about everything that has happened since I first met you, it genuinely feels strange that I can point back to one random day in May and say, that was the beginning.",
       "Back then, you were just a woman I happened to meet while farming AQW.",
@@ -176,7 +177,7 @@ const SITE_CONFIG = {
       "And thank you for giving me the privilege of loving you.",
       "One year down.",
       "Hopefully, a lifetime to go.",
-      "I love you, my team. ❤️"
+      "I love you so much, my team. ❤️"
     ]
   },
 
