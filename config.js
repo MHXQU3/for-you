@@ -76,7 +76,7 @@ const SITE_CONFIG = {
     body: [
       "To my Menna,",
       "Happy birthday, my love. ❤️",
-      "I’ve sat here for a while trying to figure out how you write a birthday letter to someone who, somehow, became one of the most important people in your entire life.",
+      "I have been sat here for a while trying to figure out how you write a birthday letter to someone who, somehow, became one of the most important people in your entire life.",
       "Because when I think about everything that has happened since I first met you, it genuinely feels strange that I can point back to one random day in May and say, that was the beginning.",
       "Back then, you were just a woman I happened to meet while farming AQW.",
       "I had absolutely no idea that the person behind that screen would become the person I would eventually fall asleep beside on calls, read books to at night, spend entire days playing games with, tell the smallest details of my day to, worry about when something feels wrong, laugh with until we're both exhausted, and ultimately call the love of my life.",
