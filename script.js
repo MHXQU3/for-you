@@ -126,7 +126,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const letterCfg = cfg.letter || {};
     const paragraphs = Array.isArray(letterCfg.body) ? letterCfg.body : [String(letterCfg.body || '')];
-    letterBody.textContent = paragraphs.join('\n\n');
+    const letterText = paragraphs.join('\n\n').trim();
+    letterBody.textContent = letterText || 'Your letter isn\'t showing up here — check that config.js was saved and uploaded with your text in it, then hard-refresh this page (Ctrl+Shift+R / Cmd+Shift+R).';
     letterSongTag.textContent = letterCfg.songTitle ? ('♫ ' + letterCfg.songTitle) : '';
 
     envelope.addEventListener('click', () => {
