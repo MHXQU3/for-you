@@ -177,7 +177,7 @@ window.SITE_CONFIG = {
       "And thank you for giving me the privilege of loving you.",
       "One year down.",
       "Hopefully, a lifetime to go.",
-      "I love you so much, my team. ❤️"
+      "I love you so much, my team, my love, my everything. ❤️"
     ]
   },
 
