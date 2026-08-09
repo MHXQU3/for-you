@@ -19,7 +19,7 @@ window.SITE_CONFIG = {
     {
       date: "The beginning",
       title: "The day you approached me",
-      caption: "We had just come off of a long farming session and you sent this apology to me for keeping you up, even though it was me that kept you up!",
+      caption: "This was after a time in my life where I just was not expecting to meet anyone special. I logged onto this game for just that, to play my game, get away from the world and who would've thought that the words 'DoT' would've been what led me to be the happiest I've been in the longest while. The first impressions I had of you was so respectful and genuine, and finding out you were a Muslim too?? Yeah I knew from then we'd go on to be great friends. But part of me thought that's where it'd stay, on game, until you invited me to Universal (despite not being an officer!) and then we farmed a bit more, go to know each other a bit more on game and then when I got invited to the discord and you took the opportunity to apologise to me?? Yeah I was so touched. You really struck me as someone different.",
       image: "assets/images/memories/memory-1.jpg",
       song: "assets/audio/song-1.mp3",
       songTitle: "Song title — Artist" 
@@ -27,7 +27,7 @@ window.SITE_CONFIG = {
     {
       date: "A little later",
       title: "The first time I knew",
-      caption: "This came after a really stressful period of me at work, you were there for me, even though I missed your event. Here is where i knew you were someone special",
+      caption: "The first time I knew was in the period where I was having issues at work and I couldn't make it to your event you just sat there, listened to me vent even though we had known each other for less than a month. You were dependable and reliable in a moment that I needed without any questions. The one bit that I still think about is you saying 'I will make a company and give you it'. You really were one of a kind and I thought of you more than a friend and then as June went on, the more I got to know you and the more I got to spend time with you. The more I came to love this person in front of me. I also remember at the end of June there was a time I was really sick. And you were so worried, spamming me the whole time and that your spams were the first thing I saw when I regained consciousness. This was the point I could say, I really loved who you were as a person.",
       image: "assets/images/memories/memory-2.PNG",
       song: "assets/audio/song-2.mp3",
       songTitle: "Song title — Artist"
@@ -35,7 +35,7 @@ window.SITE_CONFIG = {
     {
       date: "Somewhere in between",
       title: "Our little adventure",
-      caption: "You went on vacation. We went on vacation. I loved this period because I felt like we both needed this and there was something so intimate about you taking me every step of the way in this vacay",
+      caption: "September came and it was time for your vacation. Or should I say, it was time for our vacation. Because that's really what it felt like. Every second of this vacation you brought me along. You made me felt included and a part of your vacation. Whether it was us farming for Nulgath's NSoD or you sitting on your balcony/terrace, having a coffee and just sitting down to yap to me. There was something so intimate and lovely about it, something so intimate and lovely about doing it all with you. Taking me on your walks as you went to get ice cream, sharing pictures of the moon you took with me. It was so beautiful, felt like something we both needed and I really loved this period as a whole.",
       image: "assets/images/memories/memory-3.PNG",
       song: "assets/audio/song-3.mp3",
       songTitle: "Song title — Artist"
@@ -43,7 +43,7 @@ window.SITE_CONFIG = {
     {
       date: "A quiet moment",
       title: "An uncertain period",
-      caption: "Sometimes even the uncomfortable days are important. This uncomfortable time for us did cause the feelings I have of you to grow stronger. A rough period but one that built our relationship to what it is today.",
+      caption: "Sometimes even the uncomfortable days are important in a relationship and I will be lying if I said this period wasn't uncomfortable for me. All the things I was thinking and went through and the same on your side too. It was a time when we were both really uncertain about how things would play out. I really wanted you and the things I went through in this period made me realise just how much I really wanted you and how much I really prioritised you. The VNs I'd record, the amount of spam I'd give you, there was never a moment where I didn't want you. I craved you, sickeningly so. You were all I wanted, and you are all I ever want.",
       image: "assets/images/memories/memory-4.PNG",
       song: "assets/audio/song-4.mp3",
       songTitle: "Song title — Artist"
@@ -51,7 +51,7 @@ window.SITE_CONFIG = {
     {
       date: "More recently",
       title: "Our confession",
-      caption: "Best day of our lives so far, when we both felt like we could finally breathe. The one we were chasing after for so long was finally ours",
+      caption: "30.01.26. The best day of our lives. I was so over the moon receiving that bouquet that I think that smile on my face lasted me for weeks. What do you mean the woman I want loves me back. Like...the love of my life...loves me back???? LETS GOOOOOOOO. I know I teased you in the moment but seeing your reactions to how shy you became really made me feel that you love me so much and it was honestly the most adorable thing ever. Everything that we went through was really worth it. We made it. And how we planned to be sneaky with it, not tell people but drop little teasers like change our statuses, wear the same fits in AQW, there was something so innocently cute about it. Like looking back we were so in love lol and the fact that we were so in love and it just kept on growing and is still growing, I love it so much, I love you so much.",
       image: "assets/images/memories/memory-5.PNG",
       song: "assets/audio/song-5.mp3",
       songTitle: "Song title — Artist"
@@ -59,7 +59,7 @@ window.SITE_CONFIG = {
     {
       date: "Looking ahead",
       title: "Everything still to come",
-      caption: "I can't wait to spend the rest of my life with you",
+      caption: "Menna, I really can't wait to spend the rest of my life with you. You are the one I want to plan my future with, you are the one I want in my future. I really want to experience everything with you. You are my future and I am so excited because I am so sure of who I want by my side as I experience it all. You. My love. My whole world. My everything. My Menna",
       image: "assets/images/memories/memory-6.png",
       song: "assets/audio/song-6.mp3",
       songTitle: "Song title — Artist"
