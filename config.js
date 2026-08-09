@@ -8,7 +8,7 @@ window.SITE_CONFIG = {
 
   // ---- Hero section ----
   herNames: "Menna",              // e.g. "Sarah & Tom" — shown big on the landing screen
-  heroLine: "one year of you",  // small line under the names
+  heroLine: "22 years of you",  // small line under the names
   heroDate: "for your birthday",
 
   // ---- The timeline of memories ----
