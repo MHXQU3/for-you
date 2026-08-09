@@ -182,14 +182,16 @@ window.SITE_CONFIG = {
   },
 
   // ---- Memory matching game ----
-  // Needs exactly 6 photos — each will appear twice as a matching pair.
+  // Needs exactly 8 photos — each will appear twice as a matching pair (16 cards total).
   gamePhotos: [
     "assets/images/game/game-1.png",
     "assets/images/game/game-2.png",
     "assets/images/game/game-3.png",
     "assets/images/game/game-4.png",
     "assets/images/game/game-5.png",
-    "assets/images/game/game-6.png"
+    "assets/images/game/game-6.png",
+    "assets/images/game/game-7.png",
+    "assets/images/game/game-8.png"
   ],
   gameSong: "assets/audio/game-song.mp3",
   gameSongTitle: "Song title — Artist"

@@ -100,14 +100,14 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="memory-dot"></div>
           <div class="memory-card">
             <span class="memory-date">${m.date || ''}</span>
-            <img class="memory-photo" src="${m.image || ''}" alt="${m.title || ''}"
-                 onerror="this.onerror=null;this.classList.add('placeholder');this.removeAttribute('src');this.textContent='Add ${(m.image||'').split('/').pop()}';">
-            <h3 class="memory-title">${m.title || ''}</h3>
-            <p class="memory-caption">${m.caption || ''}</p>
             <div class="memory-song">
               <span class="song-title">${m.songTitle || ''}</span>
               <button class="song-play" aria-label="Play ${m.songTitle || 'song'}">${playIcon()}</button>
             </div>
+            <img class="memory-photo" src="${m.image || ''}" alt="${m.title || ''}"
+                 onerror="this.onerror=null;this.classList.add('placeholder');this.removeAttribute('src');this.textContent='Add ${(m.image||'').split('/').pop()}';">
+            <h3 class="memory-title">${m.title || ''}</h3>
+            <p class="memory-caption">${m.caption || ''}</p>
           </div>
         `;
         track.appendChild(row);
@@ -162,7 +162,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const resetBtn = document.getElementById('game-reset');
     const gamePhotos = Array.isArray(cfg.gamePhotos) && cfg.gamePhotos.length ? cfg.gamePhotos : [
       'assets/images/game/game-1.jpg','assets/images/game/game-2.jpg','assets/images/game/game-3.jpg',
-      'assets/images/game/game-4.jpg','assets/images/game/game-5.jpg','assets/images/game/game-6.jpg'
+      'assets/images/game/game-4.jpg','assets/images/game/game-5.jpg','assets/images/game/game-6.jpg',
+      'assets/images/game/game-7.jpg','assets/images/game/game-8.jpg'
     ];
 
     let moves = 0, flipped = [], matchedCount = 0, lock = false, gameMusicStarted = false;

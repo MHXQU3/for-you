@@ -16,6 +16,7 @@
   --font-display: 'Playfair Display', serif;
   --font-body:    'Quicksand', sans-serif;
   --font-script:  'Dancing Script', cursive;
+  --font-letter:  'Caveat', cursive;
 
   --ease: cubic-bezier(.22,.68,.35,1);
 }
@@ -206,6 +207,7 @@ button{ font-family: inherit; cursor: pointer; }
   background: var(--bg-deep);
   border-radius: 999px;
   padding: .5rem .5rem .5rem .9rem;
+  margin-bottom: 1rem;
 }
 .song-title{ font-size: .78rem; color: var(--rose-deep); font-weight: 600; flex: 1; }
 .song-play{
@@ -319,9 +321,10 @@ button{ font-family: inherit; cursor: pointer; }
   margin-bottom: 1rem;
 }
 .letter-body{
-  font-family: var(--font-script);
-  font-size: 1.35rem;
-  line-height: 1.7;
+  font-family: var(--font-letter);
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.75;
   color: var(--plum);
   white-space: pre-wrap;
 }

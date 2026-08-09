@@ -5,7 +5,7 @@ Everything you need to personalize is in **`config.js`** — you shouldn't need 
 ## 1. Add your photos
 Drop your photos into these folders, named to match `config.js`:
 - `assets/images/memories/` — `memory-1.jpg` through `memory-6.jpg` (or however many you use)
-- `assets/images/game/` — `game-1.jpg` through `game-6.jpg` (exactly 6 photos, each becomes a matching pair)
+- `assets/images/game/` — `game-1.jpg` through `game-8.jpg` (exactly 8 photos, each becomes a matching pair — 16 cards total)
 
 Any size works — they'll be cropped to fit. Until a photo is added, that spot shows a friendly "Add memory-1.jpg" placeholder instead of breaking.
 
