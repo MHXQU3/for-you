@@ -92,28 +92,35 @@ document.addEventListener('DOMContentLoaded', () => {
   safe('timeline', () => {
     const track = document.getElementById('timeline-track');
     const memories = Array.isArray(cfg.memories) ? cfg.memories : [];
-    memories.forEach((m) => {
-      const row = document.createElement('div');
-      row.className = 'memory reveal';
-      row.innerHTML = `
-        <div class="memory-dot"></div>
-        <div class="memory-card">
-          <span class="memory-date">${m.date || ''}</span>
-          <img class="memory-photo" src="${m.image || ''}" alt="${m.title || ''}"
-               onerror="this.onerror=null;this.classList.add('placeholder');this.removeAttribute('src');this.textContent='Add ${(m.image||'').split('/').pop()}';">
-          <h3 class="memory-title">${m.title || ''}</h3>
-          <p class="memory-caption">${m.caption || ''}</p>
-          <div class="memory-song">
-            <span class="song-title">${m.songTitle || ''}</span>
-            <button class="song-play" aria-label="Play ${m.songTitle || 'song'}">${playIcon()}</button>
+    memories.forEach((m, idx) => {
+      try {
+        const row = document.createElement('div');
+        row.className = 'memory reveal';
+        row.innerHTML = `
+          <div class="memory-dot"></div>
+          <div class="memory-card">
+            <span class="memory-date">${m.date || ''}</span>
+            <img class="memory-photo" src="${m.image || ''}" alt="${m.title || ''}"
+                 onerror="this.onerror=null;this.classList.add('placeholder');this.removeAttribute('src');this.textContent='Add ${(m.image||'').split('/').pop()}';">
+            <h3 class="memory-title">${m.title || ''}</h3>
+            <p class="memory-caption">${m.caption || ''}</p>
+            <div class="memory-song">
+              <span class="song-title">${m.songTitle || ''}</span>
+              <button class="song-play" aria-label="Play ${m.songTitle || 'song'}">${playIcon()}</button>
+            </div>
           </div>
-        </div>
-      `;
-      track.appendChild(row);
-      row.querySelector('.song-play').addEventListener('click', (e) => {
-        playSong(m.song, m.songTitle, e.currentTarget);
-      });
-      observeReveal(row);
+        `;
+        track.appendChild(row);
+        const playBtn = row.querySelector('.song-play');
+        if(playBtn){
+          playBtn.addEventListener('click', (e) => {
+            playSong(m.song, m.songTitle, e.currentTarget);
+          });
+        }
+        observeReveal(row);
+      } catch(err){
+        console.error('[site error] memory #' + (idx + 1) + ' (' + (m && m.title) + '):', err);
+      }
     });
   });
 

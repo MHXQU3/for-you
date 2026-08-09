@@ -180,12 +180,18 @@ button{ font-family: inherit; cursor: pointer; }
   margin-bottom: .2rem;
 }
 .memory-photo{
-  width: 100%; aspect-ratio: 4/3;
+  width: 100%;
+  max-height: 70vh;
+  aspect-ratio: auto;
+  object-fit: contain;
   border-radius: 12px;
-  object-fit: cover;
-  background: linear-gradient(135deg, var(--pink-soft), var(--bg-deep));
+  background: var(--bg-deep);
   margin-bottom: 1rem;
   display: block;
+}
+.memory-photo.placeholder{
+  aspect-ratio: 4/3;
+  max-height: none;
 }
 .memory-photo.placeholder{
   display: flex; align-items: center; justify-content: center;
