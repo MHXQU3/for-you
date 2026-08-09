@@ -73,7 +73,7 @@ window.SITE_CONFIG = {
   // apostrophes, or quotation marks inside your text.
   letter: {
     songBehind: "assets/audio/letter-song.mp3",
-    songTitle: "Song title — Artist",
+    songTitle: "Spark — Coldplay",
     body: [
       "To my Menna,",
       "Happy birthday, my love",
