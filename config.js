@@ -184,12 +184,12 @@ window.SITE_CONFIG = {
   // ---- Memory matching game ----
   // Needs exactly 6 photos — each will appear twice as a matching pair.
   gamePhotos: [
-    "assets/images/game/game-1.jpg",
-    "assets/images/game/game-2.jpg",
-    "assets/images/game/game-3.jpg",
-    "assets/images/game/game-4.jpg",
-    "assets/images/game/game-5.jpg",
-    "assets/images/game/game-6.jpg"
+    "assets/images/game/game-1.png",
+    "assets/images/game/game-2.png",
+    "assets/images/game/game-3.png",
+    "assets/images/game/game-4.png",
+    "assets/images/game/game-5.png",
+    "assets/images/game/game-6.png"
   ],
   gameSong: "assets/audio/game-song.mp3",
   gameSongTitle: "Song title — Artist"
