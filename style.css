@@ -53,6 +53,15 @@ button{ font-family: inherit; cursor: pointer; }
   letter-spacing: .04em;
   margin-top: .4rem;
 }
+.section-note{
+  text-align: center;
+  font-size: .85rem;
+  font-style: italic;
+  color: var(--plum-soft);
+  max-width: 480px;
+  margin: .6rem auto 0;
+  line-height: 1.5;
+}
 
 /* reveal-on-scroll */
 .reveal{ opacity: 0; transform: translateY(28px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
@@ -424,7 +433,20 @@ button{ font-family: inherit; cursor: pointer; }
 .now-playing.is-active{ transform: translate(-50%, 0); }
 .now-playing-note{ color: var(--pink); animation: pulse 1.4s ease-in-out infinite; }
 @keyframes pulse{ 0%,100%{ opacity: .5; } 50%{ opacity: 1; } }
+.now-playing-info{ display: flex; flex-direction: column; gap: .3rem; min-width: 0; }
 .now-playing-title{ font-size: .8rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 45vw; }
+.now-playing-progress{
+  width: 100%; min-width: 120px;
+  height: 3px; border-radius: 999px;
+  background: rgba(255,255,255,.25);
+  overflow: hidden;
+}
+.now-playing-progress-bar{
+  height: 100%; width: 0%;
+  background: var(--pink);
+  border-radius: 999px;
+  transition: width .2s linear;
+}
 .now-playing-pause{
   background: var(--card); color: var(--plum);
   border: none; width: 26px; height: 26px; border-radius: 50%;

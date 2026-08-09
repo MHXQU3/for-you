@@ -10,8 +10,10 @@ Drop your photos into these folders, named to match `config.js`:
 Any size works — they'll be cropped to fit. Until a photo is added, that spot shows a friendly "Add memory-1.jpg" placeholder instead of breaking.
 
 ## 2. Add your songs
-Drop MP3 files into `assets/audio/`, named to match `config.js` (`song-1.mp3`, `letter-song.mp3`, `game-song.mp3`, etc).
+Drop MP3 files into `assets/audio/`, named to match `config.js` (`song-1.mp3`, `letter-song.mp3`, `game-song-1.mp3`, `game-song-2.mp3`, `game-song-3.mp3`, etc).
 Keep files reasonably small (under ~8MB each is safe for GitHub) — export at 128–192kbps if a song is long.
+
+The memory game plays a rotation of 3 songs from `gameSongs` in `config.js` — each one plays fully, then it automatically moves to the next and updates the name shown at the bottom, looping back to the first after the third finishes.
 
 **Important — copyright:** GitHub Pages is a public host, so uploading copyrighted commercial songs technically isn't allowed by their terms, even for a private gift. It'll almost always work fine in practice for a small personal page like this, but if you want to be fully safe, two options: keep the repo **private** and only share the live link with her (GitHub Pages can still serve from a private repo on paid plans), or use short 20–30 second clips instead of full tracks.
 

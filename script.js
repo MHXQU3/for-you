@@ -49,10 +49,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const nowPlaying = document.getElementById('now-playing');
   const nowPlayingTitle = document.getElementById('now-playing-title');
   const nowPlayingPause = document.getElementById('now-playing-pause');
+  const progressBar = document.getElementById('now-playing-progress-bar');
   let activePlayButtons = [];
 
   function playSong(src, title, triggerBtn){
     if(!src) return;
+    playlist = null; // any direct single-song play cancels playlist mode
     try{
       if(audioEl.src.endsWith(src) && !audioEl.paused){
         audioEl.pause();
@@ -72,14 +74,48 @@ document.addEventListener('DOMContentLoaded', () => {
       nowPlaying.classList.add('is-active');
     } catch(err){ console.error('[site error] playSong:', err); }
   }
+
+  /* ---------- playlist mode (used by the game's rotating songs) ---------- */
+  let playlist = null; // { tracks: [{src,title}], index }
+
+  function playPlaylist(tracks){
+    const list = (tracks || []).filter(t => t && t.src);
+    if(!list.length) return;
+    playlist = { tracks: list, index: 0 };
+    playPlaylistTrack();
+  }
+  function playPlaylistTrack(){
+    if(!playlist) return;
+    const track = playlist.tracks[playlist.index];
+    try{
+      audioEl.src = track.src;
+      audioEl.play().catch(() => {
+        nowPlayingTitle.textContent = `Add "${track.src.split('/').pop()}" to assets/audio to hear this`;
+      });
+      nowPlayingTitle.textContent = track.title || '';
+      nowPlaying.classList.add('is-active');
+    } catch(err){ console.error('[site error] playPlaylistTrack:', err); }
+  }
+
   function resetPlayButtons(){
     activePlayButtons.forEach(b => b.classList.remove('is-playing'));
     activePlayButtons = [];
   }
   audioEl.addEventListener('ended', () => {
+    if(playlist){
+      playlist.index = (playlist.index + 1) % playlist.tracks.length;
+      playPlaylistTrack();
+      return;
+    }
     resetPlayButtons();
     nowPlaying.classList.remove('is-active');
   });
+  audioEl.addEventListener('timeupdate', () => {
+    if(audioEl.duration){
+      progressBar.style.width = ((audioEl.currentTime / audioEl.duration) * 100) + '%';
+    }
+  });
+  audioEl.addEventListener('loadstart', () => { progressBar.style.width = '0%'; });
   nowPlayingPause.addEventListener('click', () => {
     if(audioEl.paused){ audioEl.play(); } else { audioEl.pause(); }
   });
@@ -204,7 +240,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function flipCard(btn){
       if(lock || btn.classList.contains('is-flipped') || btn.classList.contains('is-matched')) return;
 
-      if(!gameMusicStarted && cfg.gameSong){
+      if(!gameMusicStarted && Array.isArray(cfg.gameSongs) && cfg.gameSongs.length){
+        gameMusicStarted = true;
+        playPlaylist(cfg.gameSongs);
+      } else if(!gameMusicStarted && cfg.gameSong){
         gameMusicStarted = true;
         playSong(cfg.gameSong, cfg.gameSongTitle, null);
       }
