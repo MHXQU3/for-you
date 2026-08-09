@@ -5,7 +5,7 @@
 
 window.SITE_CONFIG = {
 
-  
+
   // ---- Hero section ----
   herNames: "Menna",              // e.g. "Sarah & Tom" — shown big on the landing screen
   heroLine: "one year of you",  // small line under the names
@@ -22,7 +22,7 @@ window.SITE_CONFIG = {
       caption: "Replace this with the story of how it started — where you were, what you noticed first, how it felt.",
       image: "assets/images/memories/memory-1.jpg",
       song: "assets/audio/song-1.mp3",
-      songTitle: "Song title — Artist"
+      songTitle: "Song title — Artist" 
     },
     {
       date: "A little later",
@@ -90,7 +90,7 @@ window.SITE_CONFIG = {
       "The nights we'd say we'd only be on for a little while and somehow end up talking until some completely unreasonable hour.",
       "The Stardew farm that somehow became our little world.",
       "The bedtime stories.",
-      "The nights where I'd hear your breathing get quieter and realise you'd fallen asleep listening to my voice.",
+      "The nights where I'd see you've gone silent in chat and realise you'd fallen asleep listening to my voice.",
       "The ridiculous jokes.",
       "The serious conversations.",
       "The moments where one of us was having a horrible day and the other simply stayed.",
@@ -110,7 +110,7 @@ window.SITE_CONFIG = {
       "It just feels like life.",
       "And I want mine with you.",
       "I also want you to know how proud I am of the person you are.",
-      "I've seen so many different versions of you over this past year. The happy you. The excited you. The silly you. The sleepy you. The overthinking you. The scared you. The emotional you. The stubborn you. The ridiculously adorable you.",
+      "I've seen so many different versions of you over this past year. The happy you. The excited you. The silly you. The sleepy you. The overthinking you. The scared you. The emotional you. The ridiculously adorable you.",
       "I've seen the parts of you that you show everyone, and I've been lucky enough to be trusted with the parts you don't.",
       "And somehow, knowing more of you has never made me love you less.",
       "It has only made me love you more.",
