@@ -28,7 +28,7 @@ window.SITE_CONFIG = {
       date: "A little later",
       title: "The first time I knew",
       caption: "This came after a really stressful period of me at work, you were there for me, even though I missed your event. Here is where i knew you were someone special",
-      image: "assets/images/memories/memory-2.png",
+      image: "assets/images/memories/memory-2.PNG",
       song: "assets/audio/song-2.mp3",
       songTitle: "Song title — Artist"
     },
@@ -36,7 +36,7 @@ window.SITE_CONFIG = {
       date: "Somewhere in between",
       title: "Our little adventure",
       caption: "You went on vacation. We went on vacation. I loved this period because I felt like we both needed this and there was something so intimate about you taking me every step of the way in this vacay",
-      image: "assets/images/memories/memory-3.png",
+      image: "assets/images/memories/memory-3.PNG",
       song: "assets/audio/song-3.mp3",
       songTitle: "Song title — Artist"
     },
@@ -44,7 +44,7 @@ window.SITE_CONFIG = {
       date: "A quiet moment",
       title: "An uncertain period",
       caption: "Sometimes even the uncomfortable days are important. This uncomfortable time for us did cause the feelings I have of you to grow stronger. A rough period but one that built our relationship to what it is today.",
-      image: "assets/images/memories/memory-4.png",
+      image: "assets/images/memories/memory-4.PNG",
       song: "assets/audio/song-4.mp3",
       songTitle: "Song title — Artist"
     },
@@ -52,7 +52,7 @@ window.SITE_CONFIG = {
       date: "More recently",
       title: "Our confession",
       caption: "Best day of our lives so far, when we both felt like we could finally breathe. The one we were chasing after for so long was finally ours",
-      image: "assets/images/memories/memory-5.png",
+      image: "assets/images/memories/memory-5.PNG",
       song: "assets/audio/song-5.mp3",
       songTitle: "Song title — Artist"
     },
