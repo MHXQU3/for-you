@@ -18,8 +18,8 @@ window.SITE_CONFIG = {
   memories: [
     {
       date: "The beginning",
-      title: "The day we met",
-      caption: "Replace this with the story of how it started — where you were, what you noticed first, how it felt.",
+      title: "The day you approached me",
+      caption: "We had just come off of a long farming session and you sent this apology to me for keeping you up, even though it was me that kept you up!",
       image: "assets/images/memories/memory-1.jpg",
       song: "assets/audio/song-1.mp3",
       songTitle: "Song title — Artist" 
@@ -27,40 +27,40 @@ window.SITE_CONFIG = {
     {
       date: "A little later",
       title: "The first time I knew",
-      caption: "Write about the moment you realized this was something special.",
-      image: "assets/images/memories/memory-2.jpg",
+      caption: "This came after a really stressful period of me at work, you were there for me, even though I missed your event. Here is where i knew you were someone special",
+      image: "assets/images/memories/memory-2.png",
       song: "assets/audio/song-2.mp3",
       songTitle: "Song title — Artist"
     },
     {
       date: "Somewhere in between",
       title: "Our little adventure",
-      caption: "A trip, a random Tuesday, a place you both keep talking about.",
-      image: "assets/images/memories/memory-3.jpg",
+      caption: "You went on vacation. We went on vacation. I loved this period because I felt like we both needed this and there was something so intimate about you taking me every step of the way in this vacay",
+      image: "assets/images/memories/memory-3.png",
       song: "assets/audio/song-3.mp3",
       songTitle: "Song title — Artist"
     },
     {
       date: "A quiet moment",
-      title: "Just an ordinary day",
-      caption: "Sometimes the small, quiet days are the ones worth keeping.",
-      image: "assets/images/memories/memory-4.jpg",
+      title: "An uncertain period",
+      caption: "Sometimes even the uncomfortable days are important. This uncomfortable time for us did cause the feelings I have of you to grow stronger. A rough period but one that built our relationship to what it is today.",
+      image: "assets/images/memories/memory-4.png",
       song: "assets/audio/song-4.mp3",
       songTitle: "Song title — Artist"
     },
     {
       date: "More recently",
-      title: "Where we are now",
-      caption: "Something about who you both are together today.",
-      image: "assets/images/memories/memory-5.jpg",
+      title: "Our confession",
+      caption: "Best day of our lives so far, when we both felt like we could finally breathe. The one we were chasing after for so long was finally ours",
+      image: "assets/images/memories/memory-5.png",
       song: "assets/audio/song-5.mp3",
       songTitle: "Song title — Artist"
     },
     {
       date: "Looking ahead",
       title: "Everything still to come",
-      caption: "A note about the future you're looking forward to with her.",
-      image: "assets/images/memories/memory-6.jpg",
+      caption: "I can't wait to spend the rest of my life with you",
+      image: "assets/images/memories/memory-6.png",
       song: "assets/audio/song-6.mp3",
       songTitle: "Song title — Artist"
     }
