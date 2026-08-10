@@ -280,6 +280,110 @@ document.addEventListener('DOMContentLoaded', () => {
     buildGame();
   });
 
+  /* ---------- notes jar ---------- */
+  safe('jar', () => {
+    const moodsWrap = document.getElementById('jar-moods');
+    const notesWrap = document.getElementById('jar-notes');
+    const moods = Array.isArray(cfg.notesJar && cfg.notesJar.moods) ? cfg.notesJar.moods : [];
+    let activeId = moods.length ? moods[0].id : null;
+
+    function renderMoods(){
+      moodsWrap.innerHTML = '';
+      moods.forEach((mood) => {
+        const btn = document.createElement('button');
+        btn.className = 'jar-mood' + (mood.id === activeId ? ' is-active' : '');
+        btn.type = 'button';
+        btn.textContent = mood.label || mood.id || 'Notes';
+        btn.addEventListener('click', () => {
+          activeId = mood.id;
+          renderMoods();
+          renderNotes(mood);
+        });
+        moodsWrap.appendChild(btn);
+      });
+    }
+
+    function renderNotes(mood){
+      notesWrap.innerHTML = '';
+      const notes = Array.isArray(mood.notes) ? mood.notes : [];
+      notes.forEach((note) => {
+        const card = document.createElement('button');
+        card.type = 'button';
+        card.className = 'jar-note';
+        card.setAttribute('aria-label', 'Tap to reveal a note');
+        card.innerHTML = `
+          <div class="jar-note-inner">
+            <div class="jar-note-face jar-note-front">❀</div>
+            <div class="jar-note-face jar-note-back">${note}</div>
+          </div>`;
+        card.addEventListener('click', () => card.classList.toggle('is-open'));
+        notesWrap.appendChild(card);
+      });
+    }
+
+    if(moods.length){
+      renderMoods();
+      renderNotes(moods[0]);
+    }
+  });
+
+  /* ---------- time together counter ---------- */
+  safe('counter', () => {
+    const grid = document.getElementById('time-counter-grid');
+    const cfgStart = cfg.togetherSince;
+    const start = cfgStart
+      ? new Date(cfgStart.year, cfgStart.month - 1, cfgStart.day, cfgStart.hour || 0, cfgStart.minute || 0, 0)
+      : null;
+    if(!start || isNaN(start.getTime())) return;
+
+    const units = [
+      { key: 'years',   label: 'Years' },
+      { key: 'months',  label: 'Months' },
+      { key: 'days',    label: 'Days' },
+      { key: 'hours',   label: 'Hrs' },
+      { key: 'minutes', label: 'Min' },
+      { key: 'seconds', label: 'Sec' }
+    ];
+    grid.innerHTML = units.map(u =>
+      `<div class="time-unit"><span class="time-unit-value" id="tu-${u.key}">0</span><span class="time-unit-label">${u.label}</span></div>`
+    ).join('');
+
+    function diff(){
+      const now = new Date();
+      let years = now.getFullYear() - start.getFullYear();
+      let months = now.getMonth() - start.getMonth();
+      let days = now.getDate() - start.getDate();
+      let hours = now.getHours() - start.getHours();
+      let minutes = now.getMinutes() - start.getMinutes();
+      let seconds = now.getSeconds() - start.getSeconds();
+      if(seconds < 0){ seconds += 60; minutes--; }
+      if(minutes < 0){ minutes += 60; hours--; }
+      if(hours < 0){ hours += 24; days--; }
+      if(days < 0){
+        const prevMonthLastDay = new Date(now.getFullYear(), now.getMonth(), 0).getDate();
+        days += prevMonthLastDay;
+        months--;
+      }
+      if(months < 0){ months += 12; years--; }
+      return { years, months, days, hours, minutes, seconds };
+    }
+
+    function pad(n){ return String(n).padStart(2, '0'); }
+
+    function tick(){
+      const d = diff();
+      const setVal = (key, val) => { const el = document.getElementById('tu-' + key); if(el) el.textContent = val; };
+      setVal('years', d.years);
+      setVal('months', d.months);
+      setVal('days', d.days);
+      setVal('hours', pad(d.hours));
+      setVal('minutes', pad(d.minutes));
+      setVal('seconds', pad(d.seconds));
+    }
+    tick();
+    setInterval(tick, 1000);
+  });
+
   /* ---------- scroll reveal ---------- */
   let io;
   try {

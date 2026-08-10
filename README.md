@@ -34,10 +34,16 @@ Just add or remove lines — each one becomes its own paragraph. **One rule:** d
 ## 4. Edit the memory captions
 Each entry in the `memories` array in `config.js` is one stop on the timeline: a date label, title, caption, photo, and song. Add or delete entries freely.
 
-## 5. Preview it locally
+## 5. The notes jar
+`notesJar.moods` in `config.js` is a list of moods, each with its own set of little notes. Edit the `label` (what shows on the button) and the `notes` array (what she'll reveal when she taps a card) for each mood — add, remove, or rename moods freely, and each mood can have any number of notes.
+
+## 6. The time-together counter
+`togetherSince` in `config.js` sets the start date/time for the live counter at the bottom of the page — it's already set to 19 May 2025, 20:52 and ticks up in real time whenever the page is open.
+
+## 7. Preview it locally
 Just open `index.html` in a browser — no build step, no install needed. (Note: audio may not play from a plain double-clicked file in some browsers due to security rules — it'll work correctly once hosted, see below.)
 
-## 6. Host it on GitHub Pages
+## 8. Host it on GitHub Pages
 1. Create a new repository on GitHub (e.g. `for-her`).
 2. Upload all these files, keeping the folder structure intact.
 3. Go to the repo's **Settings → Pages**.

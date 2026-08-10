@@ -197,5 +197,100 @@ window.SITE_CONFIG = {
     { src: "assets/audio/game-song-1.mp3", title: "I'm Yours — Jason Mraz" },
     { src: "assets/audio/game-song-2.mp3", title: "Put Your Records On — Corinne Bailey Rae" },
     { src: "assets/audio/game-song-3.mp3", title: "Love You For A Long Time — Maggie Rogers" }
-  ]
+  ],
+
+  // ---- Time together counter ----
+  // Shown at the very bottom of the page, ticking live.
+  togetherSince: { year: 2025, month: 5, day: 19, hour: 20, minute: 52 },
+
+  // ---- Notes jar ----
+  // She picks a mood, then taps each little card to reveal a note.
+  notesJar: {
+    moods: [
+      {
+        id: "happy",
+        label: "When I'm happy",
+        notes: [
+          "I hope you know how much I love seeing you happy. Your happiness genuinely makes me happy too. There's something so lovely about seeing you excited, laughing or just having one of those days where everything feels a little lighter. I hope you have a million more days like this. ❤️",
+          "If you're reading this while you're happy, then I hope you take a second to appreciate the moment. You deserve these moments. You deserve to laugh until your stomach hurts, smile until your cheeks hurt and enjoy life without worrying about what comes next.",
+          "I wish I could see your face right now. I want to know what made you happy, what you're thinking about and what you're smiling about. And if I had anything to do with it, then I'm taking that as a massive personal achievement. 😭❤️",
+          "Please remember this feeling. Not because happiness has to last forever, but because when life gets difficult again, you'll know that these moments are waiting for you too. Bad days don't erase good ones, and good days don't need to be taken for granted.",
+          "You being happy is genuinely one of my favourite things. I don't need to be the reason every time. I just love knowing that you're somewhere out there smiling, enjoying yourself and having a good day.",
+          "I hope whatever made you happy today becomes one of those tiny memories you randomly think about months from now and smile again. Sometimes the smallest moments end up being the ones we remember most.",
+          "If I were there right now, I'd probably make you tell me the entire story about why you're so happy, even if it takes you 20 minutes and involves approximately 47 unnecessary details. Because I like hearing about the things that make you happy.",
+          "You deserve a life filled with moments like this. Moments where you don't have to overthink, worry or question anything. Just you, smiling and enjoying being alive.\nAnd selfishly, I hope I get to be part of as many of those moments as possible. ❤️"
+        ]
+      },
+      {
+        id: "sad",
+        label: "When I'm sad",
+        notes: [
+          "Hey love. You don't have to force yourself to be okay. You're allowed to have bad days. You're allowed to cry. You're allowed to not know what's wrong. Whatever you're feeling right now, you don't have to apologise for it.",
+          "If today feels heavy, don't worry about carrying the whole day at once. Just get through this moment. Then the next one. You don't need to have everything figured out tonight.",
+          "I wish I could take whatever is hurting you and carry some of it for you. Since I can't physically do that, let this note remind you that you don't have to carry everything alone.",
+          "It's okay if all you can do today is exist. You don't need to be productive, cheerful or strong every second. Sometimes getting through a difficult day is enough. And I'm proud of you for making it this far.",
+          "Whatever is making you sad right now, I hope you know that you don't have to hide it from me because you're worried I'll see you differently. I love you as a whole person, not just the happy parts.",
+          "Imagine me sitting beside you right now. I wouldn't necessarily try to fix anything. I'd just sit with you, hold your hand and let you feel whatever you need to feel. You don't always need a solution. Sometimes you just need someone there.",
+          "This feeling is real, but it isn't forever. One day you'll look back at this moment and realise you made it through something that once felt impossible.\nUntil then, take it one little step at a time. ❤️",
+          "If you can't be kind to yourself today, then borrow some kindness from me.\nYou're loved.\nYou're important.\nYou're not a burden.\nAnd you're allowed to have difficult days.\nDon't forget that."
+        ]
+      },
+      {
+        id: "missing-you",
+        label: "When I'm missing you",
+        notes: [
+          "If you're reading this because you miss me, come here. 🫂\nImagine me wrapping my arms around you and refusing to let go for a little while. Distance can make things difficult sometimes, but it doesn't change how much I love you.",
+          "I wish I could teleport to you right now. No big speech, no trying to fix anything. I'd just sit next to you, pull you close and let you rest against me.\nUntil teleportation becomes a thing, you'll have to settle for this tiny piece of me instead. ❤️",
+          "Do you know what I love about missing you? It reminds me how lucky I feel to have someone I actually want beside me.\nIf you're missing me right now, there's a very good chance I'm missing you too.",
+          "Close your eyes for a second.\nImagine I'm sitting beside you.\nMy hand is in yours, my head is against yours and we're just sitting there together without needing to say anything.\nThat's where I wish I could be right now.",
+          "One day there'll be a time when we won't have to miss each other from so far away. Until then, we'll keep collecting little moments together.\nAnd when we're finally able to look back at all this distance, I hope we laugh about how we somehow made it through every mile.",
+          "Sometimes I wish you could see yourself through my eyes. Maybe then you'd understand why being away from you can feel so strange. You're not just someone I want to talk to.\nYou're someone I want beside me.",
+          "If I could give you anything right now, it'd be one of those ridiculously long hugs where neither of us wants to let go first.\nSo here's the long-distance version:\n🫂❤️\nDon't let go yet.",
+          "Missing you is difficult, but there's something beautiful about knowing there's someone out there who makes me wish they were closer.\nSo if you're missing me tonight, just remember:\nYou're worth missing.\nYou're worth waiting for.\nAnd you're very, very loved."
+        ]
+      },
+      {
+        id: "stressed",
+        label: "When I'm stressed",
+        notes: [
+          "Hey love. Breathe.\nYou don't have to solve everything right now. Whatever is stressing you out can wait for a moment while you take care of yourself.\nOne thing at a time.",
+          "I know your brain probably has 500 tabs open right now, so let's close a few.\nYou don't need to figure out tomorrow.\nYou don't need to fix next week.\nYou don't need to solve your entire life tonight.\nJust focus on what's directly in front of you.",
+          "If everything feels like too much, make the world smaller for a little while.\nDrink some water.\nTake a breath.\nSit somewhere comfortable.\nForget everything else for five minutes.\nYou can come back to it when you're ready.",
+          "You are allowed to take breaks. You are allowed to say \"I can't deal with this right now.\" You are allowed to step away from things.\nResting doesn't mean you've given up.\nIt means you're giving yourself enough energy to keep going.",
+          "Whatever you're stressing about, I wish I could take some of it off your shoulders. I can't promise I can fix everything, but I can promise you don't have to face everything completely alone.\nLet me carry a little of it with you.",
+          "Remember: you have survived every stressful day you've had so far.\nEvery single one.\nYou made it through all of them, even the ones where you thought you wouldn't.\nYou'll make it through this one too. ❤️",
+          "If your brain is telling you that everything needs to be dealt with immediately, I'm here to remind you that it doesn't.\nSome things can wait.\nSome things can be imperfect.\nSome things don't even need your attention tonight.\nGive yourself permission to breathe.",
+          "Imagine me sitting beside you and saying:\n\"Hey. It's okay. We've got this.\"\nNot \"you've got this.\"\nWe've got this.\nBecause whatever life throws at you, I want you to know you don't always have to carry it by yourself."
+        ]
+      },
+      {
+        id: "need-reassurance",
+        label: "When I need reassurance",
+        notes: [
+          "In case your brain is being mean to you right now: no, you are not too much. No, you are not a burden. And no, you don't have to be perfect for me to love you.\nI chose you, not some imaginary version of you who never struggles.",
+          "If you're wondering whether I still love you:\nYes.\nIf you're wondering whether I still care:\nYes.\nIf you're wondering whether I still want you in my life:\nYes.\nSome difficult moments don't erase everything good between two people.",
+          "You don't have to constantly prove that you're worth loving. You don't have to earn affection by being useful, happy or easy to deal with.\nYou deserve love simply because you're you.",
+          "If you're scared that one mistake, one bad day or one difficult conversation could change how I see you, please remember that I see you as a whole person.\nI don't love you only when everything is easy.",
+          "If you need reassurance, you never need to feel embarrassed for asking for it.\nI'd much rather know what's going on inside your head than have you sit there wondering alone.\nYou can always come to me.",
+          "Whatever your mind is telling you right now, please remember that a feeling isn't automatically a fact.\nFear can feel real.\nOverthinking can feel convincing.\nBut that doesn't mean every thought deserves to be believed.",
+          "You are loved when you're happy.\nYou are loved when you're sad.\nYou are loved when you're stressed.\nYou are loved when you're quiet.\nYou are loved when you're struggling.\nYou are loved when you're not sure if you're loved.\nPlease remember that last one especially. ❤️",
+          "If you ever need to hear it again, I'll tell you as many times as you need:\nI love you.\nI choose you.\nI care about you.\nI'm proud of you.\nAnd you're important to me.\nThere is no limit on how many times you're allowed to need to hear that."
+        ]
+      },
+      {
+        id: "just-because",
+        label: "Just because",
+        notes: [
+          "No reason.\nNo special occasion.\nNo particular mood.\nI just wanted you to have a little reminder that I love you.\nThat's it.\nThat's the whole note. ❤️",
+          "I was thinking about you.\nThat's literally it.\nYou just appeared in my head for no reason, and I thought, \"I love that girl.\"\nSo now you're holding the evidence.",
+          "I hope you know how much I appreciate the little things you do.\nEven the things you probably don't think I notice.\nI notice.\nAnd I love you for them.",
+          "You know what's crazy?\nThere was a time when I didn't know you existed.\nNow you're one of the first people I want to tell things to.\nLife is weird.\nI'm very glad it brought me to you. ❤️",
+          "Here's your random reminder that you're beautiful.\nNot because you've dressed up.\nNot because you're having a good day.\nNot because you're trying to look good.\nJust because you're you.",
+          "I love the ordinary version of us.\nThe random conversations.\nThe stupid jokes.\nThe comfortable silence.\nThe \"what are you doing?\"\nThe \"have you eaten?\"\nThe \"goodnight.\"\nAll those tiny things that don't look romantic from the outside but mean everything to me.",
+          "If you ever wonder whether I think about you when we're not talking, yes.\nSometimes it's something big.\nSometimes it's something completely stupid.\nSometimes I'll see something and immediately think, \"She'd love that.\"\nYou've become part of the way my brain works.",
+          "This note has absolutely no important message.\nIt doesn't contain reassurance.\nIt doesn't contain advice.\nIt doesn't commemorate anything.\nIt exists purely because I love you.\nAnd honestly, I think that's a pretty good reason for a note. ❤️"
+        ]
+      }
+    ]
+  }
 };
