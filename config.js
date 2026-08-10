@@ -211,7 +211,7 @@ window.SITE_CONFIG = {
         id: "happy",
         label: "When I'm happy",
         song: "assets/audio/mood-happy.mp3",
-        songTitle: "Song title — Artist",
+        songTitle: "Adore You — Harry Styles",
         notes: [
           "I hope you know how much I love seeing you happy. Your happiness genuinely makes me happy too. There's something so lovely about seeing you excited, laughing or just having one of those days where everything feels a little lighter. I hope you have a million more days like this. ❤️",
           "If you're reading this while you're happy, then I hope you take a second to appreciate the moment. You deserve these moments. You deserve to laugh until your stomach hurts, smile until your cheeks hurt and enjoy life without worrying about what comes next.",
@@ -227,7 +227,7 @@ window.SITE_CONFIG = {
         id: "sad",
         label: "When I'm sad",
         song: "assets/audio/mood-sad.mp3",
-        songTitle: "Song title — Artist",
+        songTitle: "You Are The Reason — Calum Scott",
         notes: [
           "Hey love. You don't have to force yourself to be okay. You're allowed to have bad days. You're allowed to cry. You're allowed to not know what's wrong. Whatever you're feeling right now, you don't have to apologise for it.",
           "If today feels heavy, don't worry about carrying the whole day at once. Just get through this moment. Then the next one. You don't need to have everything figured out tonight.",
@@ -243,7 +243,7 @@ window.SITE_CONFIG = {
         id: "missing-you",
         label: "When I'm missing you",
         song: "assets/audio/mood-missing-you.mp3",
-        songTitle: "Song title — Artist",
+        songTitle: "I Miss You — Adele",
         notes: [
           "If you're reading this because you miss me, come here. 🫂\nImagine me wrapping my arms around you and refusing to let go for a little while. Distance can make things difficult sometimes, but it doesn't change how much I love you.",
           "I wish I could teleport to you right now. No big speech, no trying to fix anything. I'd just sit next to you, pull you close and let you rest against me.\nUntil teleportation becomes a thing, you'll have to settle for this tiny piece of me instead. ❤️",
@@ -259,7 +259,7 @@ window.SITE_CONFIG = {
         id: "stressed",
         label: "When I'm stressed",
         song: "assets/audio/mood-stressed.mp3",
-        songTitle: "Song title — Artist",
+        songTitle: "Vienna — Billy Joel",
         notes: [
           "Hey love. Breathe.\nYou don't have to solve everything right now. Whatever is stressing you out can wait for a moment while you take care of yourself.\nOne thing at a time.",
           "I know your brain probably has 500 tabs open right now, so let's close a few.\nYou don't need to figure out tomorrow.\nYou don't need to fix next week.\nYou don't need to solve your entire life tonight.\nJust focus on what's directly in front of you.",
@@ -275,7 +275,7 @@ window.SITE_CONFIG = {
         id: "need-reassurance",
         label: "When I need reassurance",
         song: "assets/audio/mood-need-reassurance.mp3",
-        songTitle: "Song title — Artist",
+        songTitle: "I Get To Love You — Ruelle",
         notes: [
           "In case your brain is being mean to you right now: no, you are not too much. No, you are not a burden. And no, you don't have to be perfect for me to love you.\nI chose you, not some imaginary version of you who never struggles.",
           "If you're wondering whether I still love you:\nYes.\nIf you're wondering whether I still care:\nYes.\nIf you're wondering whether I still want you in my life:\nYes.\nSome difficult moments don't erase everything good between two people.",
@@ -291,7 +291,7 @@ window.SITE_CONFIG = {
         id: "just-because",
         label: "Just because",
         song: "assets/audio/mood-just-because.mp3",
-        songTitle: "Song title — Artist",
+        songTitle: "Best Part — Daniel Caesar ft. H.E.R",
         notes: [
           "No reason.\nNo special occasion.\nNo particular mood.\nI just wanted you to have a little reminder that I love you.\nThat's it.\nThat's the whole note. ❤️",
           "I was thinking about you.\nThat's literally it.\nYou just appeared in my head for no reason, and I thought, \"I love that girl.\"\nSo now you're holding the evidence.",
