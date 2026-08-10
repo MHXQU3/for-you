@@ -311,7 +311,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', () => {
           activeId = mood.id;
           renderMoods();
-          selectMood(mood);
+          selectMood(mood, true);
         });
         moodsWrap.appendChild(btn);
       });
@@ -319,7 +319,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderMoodSong(mood){
       songWrap.innerHTML = '';
-      if(!mood.song && !mood.songTitle) return;
+      if(!mood.song && !mood.songTitle) return null;
       const row = document.createElement('div');
       row.className = 'memory-song';
       row.innerHTML = `
@@ -331,15 +331,19 @@ document.addEventListener('DOMContentLoaded', () => {
       if(btn){
         btn.addEventListener('click', (e) => playSong(mood.song, mood.songTitle, e.currentTarget));
       }
+      return btn;
     }
 
-    function selectMood(mood){
-      renderMoodSong(mood);
+    function selectMood(mood, autoplay){
+      const songBtn = renderMoodSong(mood);
       remainingNotes = shuffle(Array.isArray(mood.notes) ? mood.notes : []);
       drawnNoteEl.classList.remove('is-visible');
       drawnNoteEl.textContent = '';
       tapLabel.textContent = remainingNotes.length ? 'tap the jar' : 'no notes yet';
       jarBtn.disabled = !remainingNotes.length;
+      if(autoplay && mood.song){
+        playSong(mood.song, mood.songTitle, songBtn);
+      }
     }
 
     jarBtn.addEventListener('click', () => {
@@ -362,7 +366,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if(moods.length){
       renderMoods();
-      selectMood(moods[0]);
+      selectMood(moods[0]); // no autoplay on initial load — browsers block audio before a real click anyway
     }
   });
 
