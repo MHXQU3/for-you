@@ -261,7 +261,7 @@ window.SITE_CONFIG = {
       },
       {
         id: "missing-you",
-        label: "When I'm missing you",
+        label: "When you're missing me",
         song: "assets/audio/mood-missing-you.mp3",
         songTitle: "I Miss You — Adele",
         notes: [
