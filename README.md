@@ -10,7 +10,7 @@ Drop your photos into these folders, named to match `config.js`:
 Any size works — they'll be cropped to fit. Until a photo is added, that spot shows a friendly "Add memory-1.jpg" placeholder instead of breaking.
 
 ## 2. Add your songs
-Drop MP3 files into `assets/audio/`, named to match `config.js` (`song-1.mp3`, `letter-song.mp3`, `game-song-1.mp3`, `game-song-2.mp3`, `game-song-3.mp3`, etc).
+Drop MP3 files into `assets/audio/`, named to match `config.js` (`song-1.mp3`, `letter-song.mp3`, `game-song-1.mp3`, `game-song-2.mp3`, `game-song-3.mp3`, `bouquet-song.mp3`, etc).
 Keep files reasonably small (under ~8MB each is safe for GitHub) — export at 128–192kbps if a song is long.
 
 The memory game plays a rotation of 3 songs from `gameSongs` in `config.js` — each one plays fully, then it automatically moves to the next and updates the name shown at the bottom, looping back to the first after the third finishes.
@@ -45,10 +45,16 @@ She picks a mood, then taps the jar — a note pops out at random each time, unt
 ## 6. The time-together counter
 `togetherSince` in `config.js` sets the start date/time for the live counter at the bottom of the page — it's already set to 19 May 2025, 20:52 and ticks up in real time whenever the page is open.
 
-## 7. Preview it locally
+## 7. The passcode gate
+The very first thing she sees is a keypad — `accessCode` in `config.js` is currently `300126`. Enter it wrong and a sad cat asks if she forgot your special day; enter it right and a happy cat welcomes her in before the page fades into the site. Change the code or the messages in `gateMessages` any time. If you ever want to remove the gate entirely, just set `accessCode: ""` and it's skipped automatically.
+
+## 8. The bouquet
+Near the bottom, above the final message, there's a little bouquet — `bouquet.varieties` in `config.js` is a list of flower emoji combinations, and a random one is picked each time the page loads. Tapping it opens it up big, and tapping the envelope beside it reveals `bouquet.letter` and plays `bouquet.song`.
+
+## 9. Preview it locally
 Just open `index.html` in a browser — no build step, no install needed. (Note: audio may not play from a plain double-clicked file in some browsers due to security rules — it'll work correctly once hosted, see below.)
 
-## 8. Host it on GitHub Pages
+## 10. Host it on GitHub Pages
 1. Create a new repository on GitHub (e.g. `for-her`).
 2. Upload all these files, keeping the folder structure intact.
 3. Go to the repo's **Settings → Pages**.

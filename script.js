@@ -341,7 +341,7 @@ document.addEventListener('DOMContentLoaded', () => {
       drawnNoteEl.textContent = '';
       tapLabel.textContent = remainingNotes.length ? 'tap the jar' : 'no notes yet';
       jarBtn.disabled = !remainingNotes.length;
-      if(autoplay && mood.song){
+      if(autoplay && songBtn && mood.song){
         playSong(mood.song, mood.songTitle, songBtn);
       }
     }
@@ -366,7 +366,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if(moods.length){
       renderMoods();
-      selectMood(moods[0]); // no autoplay on initial load — browsers block audio before a real click anyway
+      selectMood(moods[0]);
     }
   });
 
@@ -425,6 +425,138 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     tick();
     setInterval(tick, 1000);
+  });
+
+  /* ---------- passcode gate ---------- */
+  safe('gate', () => {
+    const overlay = document.getElementById('gate-overlay');
+    const catEl = document.getElementById('gate-cat');
+    const msgEl = document.getElementById('gate-message');
+    const dotsWrap = document.getElementById('gate-dots');
+    const keypadWrap = document.getElementById('gate-keypad');
+
+    const code = String(cfg.accessCode || '');
+    const messages = cfg.gateMessages || {};
+    let entered = '';
+
+    if(!code){
+      overlay.style.display = 'none';
+      document.body.classList.remove('is-locked');
+      return;
+    }
+
+    function renderDots(){
+      dotsWrap.innerHTML = '';
+      for(let i = 0; i < code.length; i++){
+        const dot = document.createElement('span');
+        dot.className = 'gate-dot' + (i < entered.length ? ' is-filled' : '');
+        dotsWrap.appendChild(dot);
+      }
+    }
+
+    function resetAfterWrong(){
+      catEl.classList.add('is-shaking');
+      dotsWrap.classList.add('is-shaking');
+      setTimeout(() => {
+        catEl.classList.remove('is-shaking');
+        dotsWrap.classList.remove('is-shaking');
+        entered = '';
+        renderDots();
+        msgEl.textContent = messages.hint || 'enter our special day';
+        catEl.textContent = '🐱';
+      }, 900);
+    }
+
+    function checkCode(){
+      if(entered === code){
+        catEl.textContent = '😻';
+        msgEl.textContent = messages.success || 'WELCOME TO YOUR GIFT MY BABY';
+        setTimeout(() => {
+          overlay.classList.add('is-unlocking');
+          document.body.classList.remove('is-locked');
+          setTimeout(() => { overlay.style.display = 'none'; }, 700);
+        }, 1100);
+      } else {
+        catEl.textContent = '😿';
+        msgEl.textContent = messages.error || "you forgot our special day?";
+        resetAfterWrong();
+      }
+    }
+
+    function addDigit(d){
+      if(entered.length >= code.length) return;
+      entered += d;
+      renderDots();
+      if(entered.length === code.length){
+        setTimeout(checkCode, 200);
+      }
+    }
+    function backspace(){
+      entered = entered.slice(0, -1);
+      renderDots();
+    }
+
+    keypadWrap.innerHTML = '';
+    const keys = ['1','2','3','4','5','6','7','8','9','clear','0','back'];
+    keys.forEach((k) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      if(k === 'clear'){
+        btn.className = 'gate-key gate-key-clear';
+        btn.textContent = 'clear';
+        btn.addEventListener('click', () => { entered = ''; renderDots(); });
+      } else if(k === 'back'){
+        btn.className = 'gate-key gate-key-clear';
+        btn.textContent = '⌫';
+        btn.addEventListener('click', backspace);
+      } else {
+        btn.className = 'gate-key';
+        btn.textContent = k;
+        btn.addEventListener('click', () => addDigit(k));
+      }
+      keypadWrap.appendChild(btn);
+    });
+
+    msgEl.textContent = messages.hint || 'enter our special day';
+    renderDots();
+  });
+
+  /* ---------- bouquet ---------- */
+  safe('bouquet', () => {
+    const trigger = document.getElementById('bouquet-trigger');
+    const emojiEl = document.getElementById('bouquet-emoji');
+    const modal = document.getElementById('bouquet-modal');
+    const backdrop = document.getElementById('bouquet-backdrop');
+    const closeBtn = document.getElementById('bouquet-close');
+    const bigEl = document.getElementById('bouquet-big');
+    const envelopeBtn = document.getElementById('bouquet-envelope');
+    const hintEl = document.getElementById('bouquet-hint');
+    const letterEl = document.getElementById('bouquet-letter');
+
+    const bouquetCfg = cfg.bouquet || {};
+    const varieties = Array.isArray(bouquetCfg.varieties) && bouquetCfg.varieties.length
+      ? bouquetCfg.varieties
+      : ['💐'];
+    const chosen = varieties[Math.floor(Math.random() * varieties.length)];
+    emojiEl.textContent = chosen;
+    bigEl.textContent = chosen;
+
+    const paragraphs = Array.isArray(bouquetCfg.letter) ? bouquetCfg.letter : [];
+    letterEl.textContent = paragraphs.join('\n\n');
+
+    function openModal(){ modal.classList.add('is-active'); }
+    function closeModal(){ modal.classList.remove('is-active'); }
+    trigger.addEventListener('click', openModal);
+    closeBtn.addEventListener('click', closeModal);
+    backdrop.addEventListener('click', closeModal);
+
+    envelopeBtn.addEventListener('click', () => {
+      if(envelopeBtn.classList.contains('is-open')) return;
+      envelopeBtn.classList.add('is-open');
+      hintEl.classList.add('is-hidden');
+      letterEl.classList.add('is-visible');
+      playSong(bouquetCfg.song, bouquetCfg.songTitle, null);
+    });
   });
 
   /* ---------- scroll reveal ---------- */

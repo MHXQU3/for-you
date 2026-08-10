@@ -5,6 +5,15 @@
 
 window.SITE_CONFIG = {
 
+  // ---- Passcode gate ----
+  // She'll need to enter this on the very first screen before anything else shows.
+  accessCode: "300126",
+  gateMessages: {
+    hint: "enter our special day",
+    error: "you forgot our special day?",
+    success: "WELCOME TO YOUR GIFT MY BABY"
+  },
+
 
   // ---- Hero section ----
   herNames: "Menna",              // e.g. "Sarah & Tom" — shown big on the landing screen
@@ -363,6 +372,23 @@ window.SITE_CONFIG = {
           "I love you.\nThat's literally the note.\nNo emotional crisis.\nNo special occasion.\nNo hidden meaning.\nJust wanted to say it.\nI love you. ❤️"
         ]
       }
+    ]
+  },
+
+  // ---- Bouquet ----
+  // A little bouquet that's a surprise every time the page loads — pick as many
+  // emoji "varieties" as you like, one is chosen at random on each visit.
+  // Tap the flowers, then tap the envelope to reveal the note and play the song.
+  bouquet: {
+    song: "assets/audio/bouquet-song.mp3",
+    songTitle: "Bloom — The Paper Kites",
+    varieties: ["💐", "🌷🌷🌸", "🌹🌷🌼", "🌻🌼🌷", "🌸🌺🌷"],
+    letter: [
+      "These flowers may be virtual, but the love behind them is very real. 🌷",
+      "I wish I could be there to hand you a beautiful bouquet myself, watch that little smile appear on your face, and see you get all shy about it.",
+      "Until I can do that, let these be my little way of reminding you that you deserve to be given flowers just because you're you.",
+      "You're beautiful, you're precious to me, and you make my life so much brighter simply by being in it.",
+      "So, my love, here's a little bouquet for you. I wish I could give you a bouquet filled with a million flowers, a flower for every reason I love you, and somehow, I still don't think there would ever be enough. ❤️"
     ]
   }
 };

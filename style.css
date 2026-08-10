@@ -517,6 +517,181 @@ button{ font-family: inherit; cursor: pointer; }
 }
 
 /* ==========================================================
+   PASSCODE GATE
+   ========================================================== */
+body.is-locked{ overflow: hidden; height: 100vh; }
+body.is-locked #site-main{ visibility: hidden; }
+
+.gate-overlay{
+  position: fixed; inset: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: center;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 20%, var(--pink-soft) 0%, transparent 60%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%);
+  padding: 1.5rem;
+  transition: opacity .6s var(--ease), visibility .6s;
+}
+.gate-overlay.is-unlocking{ opacity: 0; visibility: hidden; pointer-events: none; }
+
+.gate-card{
+  width: 100%; max-width: 340px;
+  text-align: center;
+}
+.gate-cat{
+  font-size: 3.2rem;
+  margin-bottom: .3rem;
+  transition: transform .3s var(--ease);
+}
+.gate-cat.is-shaking{ animation: jar-shake .5s var(--ease); }
+.gate-message{
+  font-family: var(--font-script);
+  font-size: 1.35rem;
+  color: var(--rose-deep);
+  min-height: 1.8em;
+  margin: 0 0 1.1rem;
+}
+.gate-message.is-error{ color: var(--rose-deep); }
+
+.gate-dots{
+  display: flex; justify-content: center; gap: .5rem;
+  margin-bottom: 1.6rem;
+}
+.gate-dot{
+  width: 14px; height: 14px; border-radius: 50%;
+  border: 2px solid var(--rose-deep);
+  background: transparent;
+  transition: background .2s, transform .2s;
+}
+.gate-dot.is-filled{ background: var(--rose-deep); transform: scale(1.1); }
+.gate-dots.is-shaking{ animation: jar-shake .5s var(--ease); }
+
+.gate-keypad{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .7rem;
+  max-width: 260px;
+  margin: 0 auto;
+}
+.gate-key{
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: none;
+  background: var(--card);
+  color: var(--plum);
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  box-shadow: 0 6px 16px -8px rgba(74,46,59,.3);
+  transition: background .15s, transform .15s;
+}
+.gate-key:active{ transform: scale(.92); background: var(--pink-soft); }
+.gate-key.gate-key-clear{ font-size: .85rem; font-weight: 700; color: var(--rose-deep); }
+
+/* ==========================================================
+   BOUQUET
+   ========================================================== */
+.bouquet-section{ padding-bottom: 3rem; text-align: center; }
+.bouquet-trigger{
+  background: none; border: none;
+  margin-top: 1.6rem;
+  transition: transform .25s var(--ease);
+}
+.bouquet-trigger:hover{ transform: scale(1.06) rotate(-2deg); }
+.bouquet-emoji{
+  display: block;
+  font-size: 3.6rem;
+  filter: drop-shadow(0 12px 20px rgba(74,46,59,.25));
+}
+
+.bouquet-modal{
+  position: fixed; inset: 0; z-index: 50;
+  display: flex; align-items: center; justify-content: center;
+  padding: 1.5rem;
+  opacity: 0; pointer-events: none;
+  transition: opacity .4s var(--ease);
+}
+.bouquet-modal.is-active{ opacity: 1; pointer-events: auto; }
+.bouquet-modal-backdrop{
+  position: absolute; inset: 0;
+  background: rgba(74,46,59,.55);
+  backdrop-filter: blur(3px);
+}
+.bouquet-card{
+  position: relative;
+  background: var(--card);
+  max-width: 420px; width: 100%;
+  max-height: 85vh; overflow-y: auto;
+  border-radius: 18px;
+  padding: 2.2rem 1.8rem 1.8rem;
+  text-align: center;
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,.4);
+  transform: scale(.92) translateY(20px);
+  transition: transform .45s var(--ease);
+}
+.bouquet-modal.is-active .bouquet-card{ transform: scale(1) translateY(0); }
+.bouquet-close{
+  position: absolute; top: .7rem; right: 1rem;
+  background: none; border: none;
+  font-size: 1.6rem; line-height: 1; color: var(--plum-soft);
+}
+.bouquet-close:hover{ color: var(--rose-deep); }
+.bouquet-big{
+  font-size: 5rem;
+  margin-bottom: 1.4rem;
+  filter: drop-shadow(0 14px 24px rgba(74,46,59,.25));
+}
+.bouquet-envelope{
+  position: relative;
+  width: 90px; height: 60px;
+  margin: 0 auto;
+  background: none; border: none; padding: 0;
+  perspective: 600px;
+}
+.bouquet-envelope-back{
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, var(--pink-soft), var(--pink));
+  border-radius: 6px;
+  box-shadow: 0 10px 22px -12px rgba(74,46,59,.4);
+}
+.bouquet-envelope-flap{
+  position: absolute; inset: 0 0 auto 0; height: 100%;
+  clip-path: polygon(0 0, 100% 0, 50% 62%);
+  background: linear-gradient(200deg, var(--pink), var(--rose));
+  transform-origin: top center;
+  transition: transform .5s var(--ease);
+  border-radius: 6px 6px 0 0;
+}
+.bouquet-envelope-heart{
+  position: absolute; left: 50%; top: 38%;
+  transform: translate(-50%, -50%);
+  color: var(--gold);
+  transition: opacity .3s;
+}
+.bouquet-envelope.is-open .bouquet-envelope-flap{ transform: rotateX(180deg); }
+.bouquet-envelope.is-open .bouquet-envelope-heart{ opacity: 0; }
+.bouquet-hint{
+  font-size: .78rem; color: var(--plum-soft); letter-spacing: .04em;
+  margin: .7rem 0 0;
+}
+.bouquet-hint.is-hidden{ display: none; }
+.bouquet-letter{
+  font-family: var(--font-letter);
+  font-size: 1.2rem; line-height: 1.6;
+  color: var(--plum);
+  white-space: pre-wrap;
+  text-align: left;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height .6s var(--ease), opacity .6s var(--ease), margin .6s var(--ease);
+  margin-top: 0;
+}
+.bouquet-letter.is-visible{
+  max-height: 600px;
+  opacity: 1;
+  margin-top: 1.2rem;
+}
+
+/* ==========================================================
    FOOTER
    ========================================================== */
 .footer{
