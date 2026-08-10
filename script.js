@@ -536,10 +536,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const bouquetCfg = cfg.bouquet || {};
     const varieties = Array.isArray(bouquetCfg.varieties) && bouquetCfg.varieties.length
       ? bouquetCfg.varieties
-      : ['💐'];
-    const chosen = varieties[Math.floor(Math.random() * varieties.length)];
-    emojiEl.textContent = chosen;
-    bigEl.textContent = chosen;
+      : [];
+    const chosen = varieties.length ? varieties[Math.floor(Math.random() * varieties.length)] : '';
+
+    function setBouquetImage(imgEl, src){
+      if(!src) return;
+      imgEl.src = src;
+      imgEl.alt = 'Your bouquet';
+      imgEl.onerror = () => {
+        imgEl.onerror = null;
+        imgEl.classList.add('placeholder');
+        imgEl.removeAttribute('src');
+        imgEl.alt = 'Add ' + src.split('/').pop();
+      };
+    }
+    setBouquetImage(emojiEl, chosen);
+    setBouquetImage(bigEl, chosen);
 
     const paragraphs = Array.isArray(bouquetCfg.letter) ? bouquetCfg.letter : [];
     letterEl.textContent = paragraphs.join('\n\n');

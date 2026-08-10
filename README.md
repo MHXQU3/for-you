@@ -6,6 +6,7 @@ Everything you need to personalize is in **`config.js`** — you shouldn't need 
 Drop your photos into these folders, named to match `config.js`:
 - `assets/images/memories/` — `memory-1.jpg` through `memory-6.jpg` (or however many you use)
 - `assets/images/game/` — `game-1.jpg` through `game-8.jpg` (exactly 8 photos, each becomes a matching pair — 16 cards total)
+- `assets/images/bouquet/` — `bouquet-1.png` through `bouquet-5.png` (or however many you use) — one is picked at random each time the page loads
 
 Any size works — they'll be cropped to fit. Until a photo is added, that spot shows a friendly "Add memory-1.jpg" placeholder instead of breaking.
 
@@ -49,7 +50,7 @@ She picks a mood, then taps the jar — a note pops out at random each time, unt
 The very first thing she sees is a keypad — `accessCode` in `config.js` is currently `300126`. Enter it wrong and a sad cat asks if she forgot your special day; enter it right and a happy cat welcomes her in before the page fades into the site. Change the code or the messages in `gateMessages` any time. If you ever want to remove the gate entirely, just set `accessCode: ""` and it's skipped automatically.
 
 ## 8. The bouquet
-Near the bottom, above the final message, there's a little bouquet — `bouquet.varieties` in `config.js` is a list of flower emoji combinations, and a random one is picked each time the page loads. Tapping it opens it up big, and tapping the envelope beside it reveals `bouquet.letter` and plays `bouquet.song`.
+Near the bottom, above the final message, there's a little bouquet — `bouquet.varieties` in `config.js` is a list of photo paths (matching the files in `assets/images/bouquet/`), and a random one is picked each time the page loads. Tapping it opens it up big, and tapping the envelope beside it reveals `bouquet.letter` and plays `bouquet.song`.
 
 ## 9. Preview it locally
 Just open `index.html` in a browser — no build step, no install needed. (Note: audio may not play from a plain double-clicked file in some browsers due to security rules — it'll work correctly once hosted, see below.)
