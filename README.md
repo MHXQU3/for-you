@@ -35,7 +35,12 @@ Just add or remove lines — each one becomes its own paragraph. **One rule:** d
 Each entry in the `memories` array in `config.js` is one stop on the timeline: a date label, title, caption, photo, and song. Add or delete entries freely.
 
 ## 5. The notes jar
-`notesJar.moods` in `config.js` is a list of moods, each with its own set of little notes. Edit the `label` (what shows on the button) and the `notes` array (what she'll reveal when she taps a card) for each mood — add, remove, or rename moods freely, and each mood can have any number of notes.
+`notesJar.moods` in `config.js` is a list of moods. Each mood has:
+- `label` — what shows on the mood button
+- `song` / `songTitle` — a song that plays for that mood (name your files `mood-happy.mp3`, `mood-sad.mp3`, etc. in `assets/audio/`)
+- `notes` — the list of notes for that mood
+
+She picks a mood, then taps the jar — a note pops out at random each time, until she's seen them all, then it reshuffles. Add, remove, or rename moods and notes freely; each mood can have any number of notes.
 
 ## 6. The time-together counter
 `togetherSince` in `config.js` sets the start date/time for the live counter at the bottom of the page — it's already set to 19 May 2025, 20:52 and ticks up in real time whenever the page is open.

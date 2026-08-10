@@ -283,9 +283,23 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- notes jar ---------- */
   safe('jar', () => {
     const moodsWrap = document.getElementById('jar-moods');
-    const notesWrap = document.getElementById('jar-notes');
+    const songWrap = document.getElementById('jar-mood-song');
+    const jarBtn = document.getElementById('jar-container');
+    const tapLabel = document.getElementById('jar-tap-label');
+    const drawnNoteEl = document.getElementById('jar-drawn-note');
     const moods = Array.isArray(cfg.notesJar && cfg.notesJar.moods) ? cfg.notesJar.moods : [];
+
     let activeId = moods.length ? moods[0].id : null;
+    let remainingNotes = [];
+
+    function shuffle(arr){
+      const a = arr.slice();
+      for(let i = a.length - 1; i > 0; i--){
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
 
     function renderMoods(){
       moodsWrap.innerHTML = '';
@@ -297,33 +311,58 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', () => {
           activeId = mood.id;
           renderMoods();
-          renderNotes(mood);
+          selectMood(mood);
         });
         moodsWrap.appendChild(btn);
       });
     }
 
-    function renderNotes(mood){
-      notesWrap.innerHTML = '';
-      const notes = Array.isArray(mood.notes) ? mood.notes : [];
-      notes.forEach((note) => {
-        const card = document.createElement('button');
-        card.type = 'button';
-        card.className = 'jar-note';
-        card.setAttribute('aria-label', 'Tap to reveal a note');
-        card.innerHTML = `
-          <div class="jar-note-inner">
-            <div class="jar-note-face jar-note-front">❀</div>
-            <div class="jar-note-face jar-note-back">${note}</div>
-          </div>`;
-        card.addEventListener('click', () => card.classList.toggle('is-open'));
-        notesWrap.appendChild(card);
-      });
+    function renderMoodSong(mood){
+      songWrap.innerHTML = '';
+      if(!mood.song && !mood.songTitle) return;
+      const row = document.createElement('div');
+      row.className = 'memory-song';
+      row.innerHTML = `
+        <span class="song-title">${mood.songTitle || ''}</span>
+        <button class="song-play" aria-label="Play ${mood.songTitle || 'song'}">${playIcon()}</button>
+      `;
+      songWrap.appendChild(row);
+      const btn = row.querySelector('.song-play');
+      if(btn){
+        btn.addEventListener('click', (e) => playSong(mood.song, mood.songTitle, e.currentTarget));
+      }
     }
+
+    function selectMood(mood){
+      renderMoodSong(mood);
+      remainingNotes = shuffle(Array.isArray(mood.notes) ? mood.notes : []);
+      drawnNoteEl.classList.remove('is-visible');
+      drawnNoteEl.textContent = '';
+      tapLabel.textContent = remainingNotes.length ? 'tap the jar' : 'no notes yet';
+      jarBtn.disabled = !remainingNotes.length;
+    }
+
+    jarBtn.addEventListener('click', () => {
+      const mood = moods.find(m => m.id === activeId);
+      if(!mood) return;
+      if(!remainingNotes.length){
+        remainingNotes = shuffle(Array.isArray(mood.notes) ? mood.notes : []);
+        if(!remainingNotes.length) return;
+      }
+      const note = remainingNotes.pop();
+      tapLabel.textContent = remainingNotes.length ? remainingNotes.length + ' left in the jar' : 'that\'s all of them — tap for more';
+      jarBtn.classList.add('is-shaking');
+      drawnNoteEl.classList.remove('is-visible');
+      setTimeout(() => {
+        jarBtn.classList.remove('is-shaking');
+        drawnNoteEl.textContent = note;
+        drawnNoteEl.classList.add('is-visible');
+      }, 350);
+    });
 
     if(moods.length){
       renderMoods();
-      renderNotes(moods[0]);
+      selectMood(moods[0]);
     }
   });
 

@@ -82,7 +82,29 @@
   <h2 class="section-title reveal">a little jar of notes</h2>
   <p class="section-hint reveal">pick how you're feeling — there's something in here for you</p>
   <div class="jar-moods reveal" id="jar-moods"></div>
-  <div class="jar-notes" id="jar-notes"></div>
+  <div class="jar-mood-song" id="jar-mood-song"></div>
+  <div class="jar-visual reveal">
+    <button class="jar-container" id="jar-container" aria-label="Tap the jar for a note">
+      <svg class="jar-svg" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <clipPath id="jarBodyClip">
+            <rect x="25" y="58" width="110" height="120" rx="18"/>
+          </clipPath>
+        </defs>
+        <rect x="45" y="18" width="70" height="24" rx="7" fill="var(--rose)" stroke="var(--rose-deep)" stroke-width="3"/>
+        <rect x="38" y="38" width="84" height="18" rx="6" fill="var(--rose-deep)"/>
+        <rect x="25" y="58" width="110" height="120" rx="18" fill="rgba(255,255,255,0.5)" stroke="var(--rose-deep)" stroke-width="3"/>
+        <g clip-path="url(#jarBodyClip)">
+          <rect x="42" y="148" width="36" height="24" rx="5" fill="var(--pink)" transform="rotate(-8 60 160)"/>
+          <rect x="78" y="138" width="36" height="24" rx="5" fill="var(--pink-soft)" transform="rotate(9 96 150)"/>
+          <rect x="52" y="115" width="36" height="24" rx="5" fill="var(--pink)" transform="rotate(-5 70 127)"/>
+          <rect x="68" y="95" width="30" height="20" rx="5" fill="var(--pink-soft)" transform="rotate(6 83 105)"/>
+        </g>
+      </svg>
+      <span class="jar-tap-label" id="jar-tap-label">tap the jar</span>
+    </button>
+    <div class="jar-drawn-note" id="jar-drawn-note"></div>
+  </div>
 </section>
 
 <!-- ============ FOOTER ============ -->
