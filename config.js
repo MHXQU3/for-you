@@ -220,7 +220,17 @@ window.SITE_CONFIG = {
           "You being happy is genuinely one of my favourite things. I don't need to be the reason every time. I just love knowing that you're somewhere out there smiling, enjoying yourself and having a good day.",
           "I hope whatever made you happy today becomes one of those tiny memories you randomly think about months from now and smile again. Sometimes the smallest moments end up being the ones we remember most.",
           "If I were there right now, I'd probably make you tell me the entire story about why you're so happy, even if it takes you 20 minutes and involves approximately 47 unnecessary details. Because I like hearing about the things that make you happy.",
-          "You deserve a life filled with moments like this. Moments where you don't have to overthink, worry or question anything. Just you, smiling and enjoying being alive.\nAnd selfishly, I hope I get to be part of as many of those moments as possible. ❤️"
+          "You deserve a life filled with moments like this. Moments where you don't have to overthink, worry or question anything. Just you, smiling and enjoying being alive.\nAnd selfishly, I hope I get to be part of as many of those moments as possible. ❤️",
+          "I don't know what happened to make you this happy, but I'm glad it did. Whatever it is, I hope you squeeze every last bit of happiness out of it. You deserve to enjoy the good moments without worrying about when they'll end.",
+          "I hope you never feel guilty for being happy when someone else isn't. Your happiness isn't something you need to apologise for. Laugh loudly, smile stupidly and enjoy yourself. I'll always want good things for you.",
+          "I love hearing you get excited about things. Even when I don't completely understand why something is so exciting, I love watching you talk about it because you care about it.\nYour excitement is contagious.",
+          "You know what I hope happens today? Something makes you laugh so hard that you forget everything else for a few minutes.\nAnd if I'm the reason for that laugh, even better. 😌",
+          "I wish I could bottle up this exact version of you—the happy, carefree, smiling version—and keep it somewhere safe for the days when you need reminding that she still exists.",
+          "Please take a mental picture of this moment.\nNot literally.\nJust remember how you feel right now.\nOne day you'll be grateful you did.",
+          "If you're having an amazing day, I hope you know that I'm somewhere out here rooting for you. Even when I'm not physically beside you, I want good things to happen to you.\nAlways.",
+          "Here's a completely unnecessary reminder that I love you.\nThere is no hidden reason.\nThere is no occasion.\nI just happened to think about you while you're happy and thought you deserved another little bit of love.",
+          "Your happiness is one of those things that makes me think, \"Yep. That's my girl.\"\nAnd I genuinely hope life gives you so many reasons to feel like this.",
+          "Promise me something:\nWhen life is good, don't spend all your time waiting for it to go wrong.\nLet yourself enjoy it.\nYou deserve happy moments without a countdown attached to them. ❤️"
         ]
       },
       {
@@ -236,7 +246,17 @@ window.SITE_CONFIG = {
           "Whatever is making you sad right now, I hope you know that you don't have to hide it from me because you're worried I'll see you differently. I love you as a whole person, not just the happy parts.",
           "Imagine me sitting beside you right now. I wouldn't necessarily try to fix anything. I'd just sit with you, hold your hand and let you feel whatever you need to feel. You don't always need a solution. Sometimes you just need someone there.",
           "This feeling is real, but it isn't forever. One day you'll look back at this moment and realise you made it through something that once felt impossible.\nUntil then, take it one little step at a time. ❤️",
-          "If you can't be kind to yourself today, then borrow some kindness from me.\nYou're loved.\nYou're important.\nYou're not a burden.\nAnd you're allowed to have difficult days.\nDon't forget that."
+          "If you can't be kind to yourself today, then borrow some kindness from me.\nYou're loved.\nYou're important.\nYou're not a burden.\nAnd you're allowed to have difficult days.\nDon't forget that.",
+          "You don't have to make your sadness make sense before you're allowed to feel it. Sometimes you're sad because you're sad. That's okay too.",
+          "If you need to cry, cry.\nIf you need silence, have silence.\nIf you need someone, I'm here.\nYou don't need to decide which one you're supposed to need. Just listen to yourself.",
+          "I know sometimes sadness can make you feel completely alone, even when people are around you. So let me remind you: you're not alone. There is someone who cares about you deeply and wants you to be okay.\nMe. ❤️",
+          "You don't have to be the strongest person in the room all the time. You can put the armour down with me.\nI'll still love you underneath it.",
+          "If today is one of those days where everything feels pointless, don't make any big conclusions about your life from one bad day.\nRest.\nEat something.\nBreathe.\nTomorrow gets a say too.",
+          "I wish I could sit beside you right now without saying anything. Sometimes words aren't enough, and sometimes they aren't even necessary.\nI'd just want you to know I stayed.",
+          "One day you're going to smile again without having to think about it.\nMaybe not today.\nMaybe not tomorrow.\nBut you will.\nAnd until then, I'm still here.",
+          "Please don't compare your worst moments to someone else's best moments. You don't know what they're carrying, and they don't know what you're carrying.\nBe gentle with yourself.",
+          "If you don't have the energy to talk, that's okay.\nIf you don't have the energy to explain, that's okay.\nYou don't have to perform being okay for me.",
+          "I know I can't magically make every sad feeling disappear.\nBut I can promise that your sadness will never make me love you less.\nYou don't have to be happy to be loved by me."
         ]
       },
       {
@@ -252,7 +272,17 @@ window.SITE_CONFIG = {
           "One day there'll be a time when we won't have to miss each other from so far away. Until then, we'll keep collecting little moments together.\nAnd when we're finally able to look back at all this distance, I hope we laugh about how we somehow made it through every mile.",
           "Sometimes I wish you could see yourself through my eyes. Maybe then you'd understand why being away from you can feel so strange. You're not just someone I want to talk to.\nYou're someone I want beside me.",
           "If I could give you anything right now, it'd be one of those ridiculously long hugs where neither of us wants to let go first.\nSo here's the long-distance version:\n🫂❤️\nDon't let go yet.",
-          "Missing you is difficult, but there's something beautiful about knowing there's someone out there who makes me wish they were closer.\nSo if you're missing me tonight, just remember:\nYou're worth missing.\nYou're worth waiting for.\nAnd you're very, very loved."
+          "Missing you is difficult, but there's something beautiful about knowing there's someone out there who makes me wish they were closer.\nSo if you're missing me tonight, just remember:\nYou're worth missing.\nYou're worth waiting for.\nAnd you're very, very loved.",
+          "I wonder what you're doing right now.\nAnd knowing you, you're probably doing something completely ordinary.\nBut I'd still rather be there watching you do that ordinary thing than be anywhere else.",
+          "I miss the little things.\nNot just the big romantic moments.\nI miss talking about nothing.\nI miss hearing your voice.\nI miss being able to immediately tell you something that popped into my head.\nI miss you.",
+          "Distance is such a weird thing.\nYou're far enough away that I can't simply reach for you, but close enough in my heart that sometimes it feels like you should be right beside me.",
+          "If you could magically appear beside me for exactly one hour, I wouldn't waste it doing anything impressive.\nI'd just want to hold you.\nAnd probably stare at you a little too much. 😭",
+          "One day I want \"I miss you\" to become something we say about the past.\nSomething we look back on and say, \"Remember when we had to be so far apart?\"\nAnd then we'll laugh because we'll be sitting right beside each other.",
+          "Here's a tiny reminder that even when we're doing completely separate things, you're still somewhere in the back of my mind.\nYou don't have to be physically beside me to be with me.",
+          "Sometimes I see something and instinctively think, \"I need to show her this.\"\nThat's when I realise just how much you've become part of my everyday life.\nYou're in the little things now.",
+          "I don't just miss your presence.\nI miss the feeling of being around you.\nThat little sense of comfort that comes from knowing you're there.",
+          "If I could send you one thing through this piece of paper, I'd send you a hug.\nUnfortunately, paper technology hasn't advanced that far yet.\nSo instead:\n🫂\nPlease accept this until further notice.",
+          "The good thing about missing you is knowing there's someone worth missing.\nAnd when the distance finally ends, I hope we appreciate every ordinary moment together because we know exactly what it felt like not to have them."
         ]
       },
       {
@@ -268,7 +298,17 @@ window.SITE_CONFIG = {
           "Whatever you're stressing about, I wish I could take some of it off your shoulders. I can't promise I can fix everything, but I can promise you don't have to face everything completely alone.\nLet me carry a little of it with you.",
           "Remember: you have survived every stressful day you've had so far.\nEvery single one.\nYou made it through all of them, even the ones where you thought you wouldn't.\nYou'll make it through this one too. ❤️",
           "If your brain is telling you that everything needs to be dealt with immediately, I'm here to remind you that it doesn't.\nSome things can wait.\nSome things can be imperfect.\nSome things don't even need your attention tonight.\nGive yourself permission to breathe.",
-          "Imagine me sitting beside you and saying:\n\"Hey. It's okay. We've got this.\"\nNot \"you've got this.\"\nWe've got this.\nBecause whatever life throws at you, I want you to know you don't always have to carry it by yourself."
+          "Imagine me sitting beside you and saying:\n\"Hey. It's okay. We've got this.\"\nNot \"you've got this.\"\nWe've got this.\nBecause whatever life throws at you, I want you to know you don't always have to carry it by yourself.",
+          "Stop for a second.\nSeriously.\nWhatever you're doing, take one minute.\nPut your phone down, unclench your jaw, drop your shoulders and take a slow breath.\nYou don't have to be \"on\" every second.",
+          "Your worth isn't measured by how much you get done today.\nYou are still you if you accomplish ten things.\nYou are still you if you accomplish none.\nPlease remember that.",
+          "I know your brain wants everything sorted immediately.\nBut some problems need time.\nSome answers need time.\nAnd some things will solve themselves without you exhausting yourself trying to force them.",
+          "If today feels like too much, make the goal smaller.\nDon't think about finishing everything.\nJust think about the next thing.\nThen the next.\nThen the next.\nThat's enough.",
+          "Drink some water.\nYes, I'm serious.\nYou've probably been stressing for three hours and forgotten that you're a human being with basic needs. 😭\nGo take care of yourself.",
+          "You don't have to carry tomorrow before tomorrow arrives.\nWhatever tomorrow brings, you'll meet it when you get there.\nFor now, you're allowed to just exist in today.",
+          "Imagine me putting my hands on your shoulders and saying:\n\"Look at me. You're okay. Breathe.\"\nWhatever is stressing you out might still be there afterwards.\nBut you'll be facing it with a calmer mind.",
+          "There is no prize for exhausting yourself the most.\nYou don't get bonus points for suffering quietly.\nAsk for help.\nTake a break.\nSay no.\nRest.\nWhatever you need.",
+          "I know you're capable of handling a lot.\nBut being capable doesn't mean you should have to handle everything alone.\nLet people help you sometimes.\nLet me help you sometimes.",
+          "Whatever is stressing you out right now, imagine putting it into a little box.\nClose the box.\nPut it down.\nYou can pick it back up later.\nIt doesn't need your attention every second of the day.\nTake your peace back for a little while. ❤️"
         ]
       },
       {
@@ -284,7 +324,17 @@ window.SITE_CONFIG = {
           "If you need reassurance, you never need to feel embarrassed for asking for it.\nI'd much rather know what's going on inside your head than have you sit there wondering alone.\nYou can always come to me.",
           "Whatever your mind is telling you right now, please remember that a feeling isn't automatically a fact.\nFear can feel real.\nOverthinking can feel convincing.\nBut that doesn't mean every thought deserves to be believed.",
           "You are loved when you're happy.\nYou are loved when you're sad.\nYou are loved when you're stressed.\nYou are loved when you're quiet.\nYou are loved when you're struggling.\nYou are loved when you're not sure if you're loved.\nPlease remember that last one especially. ❤️",
-          "If you ever need to hear it again, I'll tell you as many times as you need:\nI love you.\nI choose you.\nI care about you.\nI'm proud of you.\nAnd you're important to me.\nThere is no limit on how many times you're allowed to need to hear that."
+          "If you ever need to hear it again, I'll tell you as many times as you need:\nI love you.\nI choose you.\nI care about you.\nI'm proud of you.\nAnd you're important to me.\nThere is no limit on how many times you're allowed to need to hear that.",
+          "You don't have to wonder whether I mean it when I tell you I love you.\nI do.\nI don't say it because I'm supposed to.\nI say it because it's true.",
+          "If your mind is telling you that you're difficult to love, I need you to know that I don't see you that way.\nI see someone human.\nSomeone with feelings.\nSomeone with flaws.\nSomeone I love.",
+          "You are not replaceable to me.\nThere isn't some \"better version\" of you waiting around the corner.\nI don't want someone else.\nI want you.",
+          "You don't have to compete with anyone for my affection.\nThere isn't a scoreboard.\nThere isn't a ranking.\nYou have your own place in my heart, and nobody else gets to occupy it.",
+          "If you're worried that I've changed my mind about you, look at this note.\nI'm still here.\nStill loving you.\nStill choosing you.\nStill wanting to build memories with you.",
+          "You can ask me \"Do you still love me?\" a hundred times.\nI'll answer a hundred times.\nAnd if you need a hundred and one, I'll answer that one too.",
+          "You don't need to apologise for needing comfort.\nWanting reassurance doesn't make you needy.\nWanting to feel secure with someone you love is completely human.",
+          "Remember this:\nA disagreement isn't the same thing as rejection.\nA quiet moment isn't automatically abandonment.\nA difficult day isn't the end of something beautiful.\nSometimes a difficult moment is just a difficult moment.",
+          "If you could see the way I see you, I genuinely think you'd be kinder to yourself.\nYou'd see someone worthy of love.\nSomeone beautiful.\nSomeone worth choosing.\nSomeone worth keeping.",
+          "In case you forgot:\nI love you.\nI love you.\nNot the version of you that has everything together.\nNot the version who never gets upset.\nNot the version who never makes mistakes.\nYou."
         ]
       },
       {
@@ -300,7 +350,17 @@ window.SITE_CONFIG = {
           "Here's your random reminder that you're beautiful.\nNot because you've dressed up.\nNot because you're having a good day.\nNot because you're trying to look good.\nJust because you're you.",
           "I love the ordinary version of us.\nThe random conversations.\nThe stupid jokes.\nThe comfortable silence.\nThe \"what are you doing?\"\nThe \"have you eaten?\"\nThe \"goodnight.\"\nAll those tiny things that don't look romantic from the outside but mean everything to me.",
           "If you ever wonder whether I think about you when we're not talking, yes.\nSometimes it's something big.\nSometimes it's something completely stupid.\nSometimes I'll see something and immediately think, \"She'd love that.\"\nYou've become part of the way my brain works.",
-          "This note has absolutely no important message.\nIt doesn't contain reassurance.\nIt doesn't contain advice.\nIt doesn't commemorate anything.\nIt exists purely because I love you.\nAnd honestly, I think that's a pretty good reason for a note. ❤️"
+          "This note has absolutely no important message.\nIt doesn't contain reassurance.\nIt doesn't contain advice.\nIt doesn't commemorate anything.\nIt exists purely because I love you.\nAnd honestly, I think that's a pretty good reason for a note. ❤️",
+          "I hope you know that somewhere in my day, there will always be a moment where something reminds me of you.\nSometimes it's romantic.\nSometimes it's completely ridiculous.\nEither way, I smile.",
+          "You have no idea how cute you are when you're not trying to be cute.\nThose are some of my favourite moments.\nDon't ever change that.",
+          "This note has one job:\nRemind you that you're loved.\nJob completed.\nYou may now continue with your day. ❤️",
+          "I don't think you realise how many little things about you have become favourites of mine.\nYour expressions.\nYour voice.\nYour reactions.\nYour way of talking.\nThe random things you say.\nI could keep going forever.",
+          "If this note could talk, it would probably just walk up to you, give you a kiss on the forehead and leave.\nSo...\nConsider yourself forehead-kissed. 😘",
+          "I hope one day we're old and looking back at silly things like this.\nYou'll probably ask why I wrote so many random notes.\nAnd I'll probably say:\n\"Because I loved you too much to stop writing them.\"",
+          "You know that feeling when something tiny makes your entire day better?\nThat's what you do to mine sometimes.\nAnd you don't even realise you're doing it.",
+          "Here's a completely random compliment:\nI think you're one of the most beautiful people I've ever met.\nAnd no, you don't get to argue with the person who wrote the note.",
+          "If I could give you one random thing right now, I'd give you one of those hugs that lasts slightly longer than necessary.\nYou know the ones.\nThe ones where neither person wants to let go first.",
+          "I love you.\nThat's literally the note.\nNo emotional crisis.\nNo special occasion.\nNo hidden meaning.\nJust wanted to say it.\nI love you. ❤️"
         ]
       }
     ]
