@@ -588,10 +588,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const completeCloseBtn = document.getElementById('wish-complete-close');
     const completeBackdrop = document.getElementById('wish-complete-backdrop');
 
+    const moonBtn = document.getElementById('moon-star');
+    const moonModal = document.getElementById('moon-modal');
+    const moonTextEl = document.getElementById('moon-text');
+    const moonCloseBtn = document.getElementById('moon-close');
+    const moonBackdrop = document.getElementById('moon-backdrop');
+
     const skyCfg = cfg.wishingSky || {};
     const wishes = Array.isArray(skyCfg.wishes) ? skyCfg.wishes : [];
     completeTextEl.textContent = skyCfg.completeMessage ||
       "You found all my wishes for you on this gift ❤️";
+
+    const moonCfg = skyCfg.moon || {};
+    const moonParagraphs = Array.isArray(moonCfg.text) ? moonCfg.text : [];
+    moonTextEl.textContent = moonParagraphs.join('\n\n');
 
     // ambient background twinkle dots
     for(let i = 0; i < 26; i++){
@@ -604,16 +614,30 @@ document.addEventListener('DOMContentLoaded', () => {
       twinklesEl.appendChild(t);
     }
 
-    // fixed scattered positions (top%, left%) for up to 6 stars
-    const positions = [
-      { top: 16, left: 14 },
-      { top: 12, left: 78 },
-      { top: 46, left: 32 },
-      { top: 55, left: 68 },
-      { top: 80, left: 18 },
-      { top: 82, left: 82 }
-    ];
-
+    // random scattered positions (top%, left%) each time the page loads,
+    // keeping clear of the moon's reserved top-right corner and of each other
+    function randomStarPositions(count){
+      const result = [];
+      let attempts = 0;
+      while(result.length < count && attempts < 400){
+        attempts++;
+        const top = 10 + Math.random() * 74;
+        const left = 8 + Math.random() * 80;
+        if(top < 28 && left > 66) continue; // stay out of the moon's corner
+        let tooClose = false;
+        for(const p of result){
+          const dx = p.left - left, dy = p.top - top;
+          if(Math.sqrt(dx * dx + dy * dy) < 17){ tooClose = true; break; }
+        }
+        if(tooClose) continue;
+        result.push({ top, left });
+      }
+      while(result.length < count){
+        result.push({ top: 20 + Math.random() * 55, left: 12 + Math.random() * 55 });
+      }
+      return result;
+    }
+    const positions = randomStarPositions(wishes.length);
     let foundCount = 0;
     let allFoundPending = false;
     let skyMusicStarted = false;
@@ -627,11 +651,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     function closeCompleteModal(){
       completeModal.classList.remove('is-active');
+      moonBtn.classList.add('is-visible');
     }
     wishCloseBtn.addEventListener('click', closeWishModal);
     wishBackdrop.addEventListener('click', closeWishModal);
     completeCloseBtn.addEventListener('click', closeCompleteModal);
     completeBackdrop.addEventListener('click', closeCompleteModal);
+
+    function closeMoonModal(){ moonModal.classList.remove('is-active'); }
+    moonBtn.addEventListener('click', () => { moonModal.classList.add('is-active'); });
+    moonCloseBtn.addEventListener('click', closeMoonModal);
+    moonBackdrop.addEventListener('click', closeMoonModal);
 
     wishes.forEach((wish, i) => {
       const pos = positions[i % positions.length];

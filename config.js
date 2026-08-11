@@ -382,6 +382,19 @@ window.SITE_CONFIG = {
     song: "assets/audio/wishes-song.mp3",
     songTitle: "A Sky Full Of Stars — Coldplay",
     completeMessage: "You found all my wishes for you on this gift ❤️ I have so so many more but if I were to put them all down here, this page would be filled with stars 😭",
+    moon: {
+      text: [
+        "🌙 \"If every star in this sky could grant you one wish, I'd still choose the moon for you.\"",
+        "Because stars can give you moments, dreams, adventures and beautiful little things to look forward to.",
+        "But if I could make one wish for you myself, it would be that no matter where life takes you, you always have someone beside you who makes the darkest nights feel a little less dark.",
+        "Someone who reminds you that you're loved when you forget.",
+        "Someone who listens when your mind gets too loud.",
+        "Someone who celebrates your happiest moments and sits beside you through the difficult ones.",
+        "Someone who chooses you, again and again, in all the quiet little moments that make up a life.",
+        "And selfishly, I hope I get to be that person for you for a very, very long time. ❤️",
+        "Happy birthday, يا قمري. 🌙"
+      ]
+    },
     wishes: [
       {
         title: "A wish for peace",
