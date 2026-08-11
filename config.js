@@ -380,7 +380,7 @@ window.SITE_CONFIG = {
   // find all of them for a final little surprise message.
   wishingSky: {
     song: "assets/audio/wishes-song.mp3",
-    songTitle: "Song title — Artist",
+    songTitle: "A Sky Full Of Stars — Coldplay",
     completeMessage: "You found all my wishes for you on this gift ❤️ I have so so many more but if I were to put them all down here, this page would be filled with stars 😭",
     wishes: [
       {
