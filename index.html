@@ -144,6 +144,36 @@
   </div>
 </div>
 
+<!-- ============ WISHING SKY ============ -->
+<section class="wishes-section" id="wishes-section">
+  <h2 class="section-title reveal">a sky full of wishes</h2>
+  <p class="section-hint reveal" id="wishes-hint">tap a star</p>
+  <div class="wishes-sky" id="wishes-sky">
+    <div class="sky-twinkles" id="sky-twinkles" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- single wish modal -->
+<div class="wish-modal" id="wish-modal" aria-hidden="true">
+  <div class="wish-modal-backdrop" id="wish-backdrop"></div>
+  <div class="wish-card" role="dialog" aria-modal="true" aria-label="A wish for you">
+    <button class="wish-close" id="wish-close" aria-label="Close">&times;</button>
+    <svg class="wish-star-icon" viewBox="0 0 24 24" width="42" height="42"><path d="M12 2l2.9 6.9L22 9.6l-5.5 4.8L18 22l-6-3.7L6 22l1.5-7.6L2 9.6l7.1-.7L12 2z" fill="currentColor"/></svg>
+    <h3 class="wish-title" id="wish-title"></h3>
+    <p class="wish-text" id="wish-text"></p>
+  </div>
+</div>
+
+<!-- completion modal -->
+<div class="wish-modal" id="wish-complete-modal" aria-hidden="true">
+  <div class="wish-modal-backdrop" id="wish-complete-backdrop"></div>
+  <div class="wish-card wish-complete-card" role="dialog" aria-modal="true" aria-label="You found them all">
+    <button class="wish-close" id="wish-complete-close" aria-label="Close">&times;</button>
+    <svg class="wish-star-icon wish-star-icon-large" viewBox="0 0 24 24" width="60" height="60"><path d="M12 2l2.9 6.9L22 9.6l-5.5 4.8L18 22l-6-3.7L6 22l1.5-7.6L2 9.6l7.1-.7L12 2z" fill="currentColor"/></svg>
+    <p class="wish-complete-text" id="wish-complete-text"></p>
+  </div>
+</div>
+
 <!-- ============ FOOTER ============ -->
 <footer class="footer">
   <p class="footer-script">happy birthday, my love</p>

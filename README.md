@@ -52,10 +52,13 @@ The very first thing she sees is a keypad — `accessCode` in `config.js` is cur
 ## 8. The bouquet
 Near the bottom, above the final message, there's a little bouquet — `bouquet.varieties` in `config.js` is a list of photo paths (matching the files in `assets/images/bouquet/`), and a random one is picked each time the page loads. Tapping it opens it up big, and tapping the envelope beside it reveals `bouquet.letter` and plays `bouquet.song`.
 
-## 9. Preview it locally
+## 9. The wishing sky
+Six stars scattered over a night sky — `wishingSky.wishes` in `config.js` is a list of `title`/`text` pairs, one per star. Tap a star to reveal its wish; once all six have been found, a final message shows (`wishingSky.completeMessage`).
+
+## 10. Preview it locally
 Just open `index.html` in a browser — no build step, no install needed. (Note: audio may not play from a plain double-clicked file in some browsers due to security rules — it'll work correctly once hosted, see below.)
 
-## 10. Host it on GitHub Pages
+## 11. Host it on GitHub Pages
 1. Create a new repository on GitHub (e.g. `for-her`).
 2. Upload all these files, keeping the folder structure intact.
 3. Go to the repo's **Settings → Pages**.

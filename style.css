@@ -714,6 +714,107 @@ body.is-locked #site-main{ visibility: hidden; }
 }
 
 /* ==========================================================
+   WISHING SKY
+   ========================================================== */
+.wishes-section{ padding-bottom: 3.5rem; }
+.wishes-sky{
+  position: relative;
+  max-width: 640px;
+  margin: 2rem auto 0;
+  height: 340px;
+  border-radius: 22px;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 70% 50% at 30% 20%, rgba(255,255,255,.06), transparent 60%),
+    linear-gradient(160deg, #241c38 0%, #3a2a52 55%, #4b3a63 100%);
+  box-shadow: 0 20px 45px -20px rgba(36,28,56,.55);
+}
+@media (min-width: 640px){ .wishes-sky{ height: 380px; } }
+
+.sky-twinkles{ position: absolute; inset: 0; pointer-events: none; }
+.sky-twinkle{
+  position: absolute;
+  width: 3px; height: 3px;
+  border-radius: 50%;
+  background: #fff;
+  animation: twinkle ease-in-out infinite;
+}
+@keyframes twinkle{ 0%,100%{ opacity: .15; } 50%{ opacity: .8; } }
+
+.wish-star{
+  position: absolute;
+  background: none; border: none; padding: .5rem;
+  color: #FFE9C7;
+  transform: translate(-50%, -50%);
+  transition: transform .3s var(--ease);
+  animation: star-twinkle 2.6s ease-in-out infinite;
+}
+.wish-star svg{ width: 22px; height: 22px; filter: drop-shadow(0 0 6px rgba(255,233,199,.6)); }
+.wish-star:hover{ transform: translate(-50%, -50%) scale(1.25); }
+@keyframes star-twinkle{ 0%,100%{ opacity: .65; } 50%{ opacity: 1; } }
+.wish-star.is-found{
+  color: var(--gold);
+  animation: none;
+  opacity: 1;
+}
+.wish-star.is-found svg{ filter: drop-shadow(0 0 10px rgba(206,159,96,.8)); }
+
+/* ==========================================================
+   WISH MODALS
+   ========================================================== */
+.wish-modal{
+  position: fixed; inset: 0; z-index: 55;
+  display: flex; align-items: center; justify-content: center;
+  padding: 1.5rem;
+  opacity: 0; pointer-events: none;
+  transition: opacity .4s var(--ease);
+}
+.wish-modal.is-active{ opacity: 1; pointer-events: auto; }
+.wish-modal-backdrop{
+  position: absolute; inset: 0;
+  background: rgba(36,28,56,.6);
+  backdrop-filter: blur(3px);
+}
+.wish-card{
+  position: relative;
+  background: var(--card);
+  max-width: 420px; width: 100%;
+  max-height: 82vh; overflow-y: auto;
+  border-radius: 18px;
+  padding: 2.2rem 1.9rem 1.9rem;
+  text-align: center;
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,.4);
+  transform: scale(.92) translateY(20px);
+  transition: transform .45s var(--ease);
+}
+.wish-modal.is-active .wish-card{ transform: scale(1) translateY(0); }
+.wish-close{
+  position: absolute; top: .7rem; right: 1rem;
+  background: none; border: none;
+  font-size: 1.6rem; line-height: 1; color: var(--plum-soft);
+}
+.wish-close:hover{ color: var(--rose-deep); }
+.wish-star-icon{ color: var(--gold); margin-bottom: .8rem; }
+.wish-title{
+  font-size: 1.4rem; font-style: italic; color: var(--rose-deep);
+  margin-bottom: .8rem;
+}
+.wish-text{
+  font-family: var(--font-letter);
+  font-size: 1.25rem; line-height: 1.55;
+  color: var(--plum);
+  margin: 0;
+}
+.wish-complete-card{ padding-top: 2.6rem; }
+.wish-star-icon-large{ color: var(--gold); }
+.wish-complete-text{
+  font-family: var(--font-letter);
+  font-size: 1.35rem; line-height: 1.55;
+  color: var(--plum);
+  margin: .4rem 0 0;
+}
+
+/* ==========================================================
    FOOTER
    ========================================================== */
 .footer{

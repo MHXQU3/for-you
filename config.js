@@ -375,6 +375,39 @@ window.SITE_CONFIG = {
     ]
   },
 
+  // ---- Wishing sky ----
+  // Six tappable stars scattered over a night sky. Tap a star to reveal a wish;
+  // find all of them for a final little surprise message.
+  wishingSky: {
+    completeMessage: "You found all my wishes for you on this gift ❤️ I have so so many more but if I were to put them all down here, this page would be filled with stars 😭",
+    wishes: [
+      {
+        title: "A wish for peace",
+        text: "I wish that this year gives your mind the peace it deserves — fewer nights spent overthinking, fewer things weighing on your heart, and more moments where you can simply exist and feel okay."
+      },
+      {
+        title: "A wish for her dreams",
+        text: "I wish that every dream you've quietly kept to yourself gets a little closer to becoming real. I hope you surprise yourself with just how far you can go."
+      },
+      {
+        title: "A wish for confidence",
+        text: "I wish you could see yourself through my eyes for just one day. I wish you always remember how beautiful, capable, intelligent and genuinely special you are — especially on the days when you forget."
+      },
+      {
+        title: "A wish for happiness",
+        text: "I wish this year gives you an unreasonable amount of little moments that make you smile — random laughter, unexpected good news, peaceful mornings, late-night conversations, and memories you'll look back on and think, \"God, I was happy.\""
+      },
+      {
+        title: "A wish for adventure",
+        text: "I wish you a year full of stories worth telling. New places, new experiences, spontaneous plans, ridiculous adventures and all the little things that make life feel bigger than the screen we spend so much of it behind."
+      },
+      {
+        title: "A wish for us ❤️",
+        text: "And selfishly, I wish that this is the year the distance between us starts becoming a memory. I wish for more ordinary days together, more quiet nights beside each other, more adventures, more laughter, and eventually a life where \"I wish you were here\" becomes \"come here.\""
+      }
+    ]
+  },
+
   // ---- Bouquet ----
   // A little bouquet that's a surprise every time the page loads — put 5 (or as
   // many as you like) photos in assets/images/bouquet/ and one is picked at

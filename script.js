@@ -571,6 +571,96 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* ---------- wishing sky ---------- */
+  safe('wishes', () => {
+    const skyEl = document.getElementById('wishes-sky');
+    const twinklesEl = document.getElementById('sky-twinkles');
+    const hintEl = document.getElementById('wishes-hint');
+
+    const wishModal = document.getElementById('wish-modal');
+    const wishTitleEl = document.getElementById('wish-title');
+    const wishTextEl = document.getElementById('wish-text');
+    const wishCloseBtn = document.getElementById('wish-close');
+    const wishBackdrop = document.getElementById('wish-backdrop');
+
+    const completeModal = document.getElementById('wish-complete-modal');
+    const completeTextEl = document.getElementById('wish-complete-text');
+    const completeCloseBtn = document.getElementById('wish-complete-close');
+    const completeBackdrop = document.getElementById('wish-complete-backdrop');
+
+    const skyCfg = cfg.wishingSky || {};
+    const wishes = Array.isArray(skyCfg.wishes) ? skyCfg.wishes : [];
+    completeTextEl.textContent = skyCfg.completeMessage ||
+      "You found all my wishes for you on this gift ❤️";
+
+    // ambient background twinkle dots
+    for(let i = 0; i < 26; i++){
+      const t = document.createElement('span');
+      t.className = 'sky-twinkle';
+      t.style.top = Math.random() * 100 + '%';
+      t.style.left = Math.random() * 100 + '%';
+      t.style.animationDuration = (2 + Math.random() * 3) + 's';
+      t.style.animationDelay = (Math.random() * -4) + 's';
+      twinklesEl.appendChild(t);
+    }
+
+    // fixed scattered positions (top%, left%) for up to 6 stars
+    const positions = [
+      { top: 16, left: 14 },
+      { top: 12, left: 78 },
+      { top: 46, left: 32 },
+      { top: 55, left: 68 },
+      { top: 80, left: 18 },
+      { top: 82, left: 82 }
+    ];
+
+    let foundCount = 0;
+    let allFoundPending = false;
+
+    function closeWishModal(){
+      wishModal.classList.remove('is-active');
+      if(allFoundPending){
+        allFoundPending = false;
+        setTimeout(() => { completeModal.classList.add('is-active'); }, 450);
+      }
+    }
+    function closeCompleteModal(){
+      completeModal.classList.remove('is-active');
+    }
+    wishCloseBtn.addEventListener('click', closeWishModal);
+    wishBackdrop.addEventListener('click', closeWishModal);
+    completeCloseBtn.addEventListener('click', closeCompleteModal);
+    completeBackdrop.addEventListener('click', closeCompleteModal);
+
+    wishes.forEach((wish, i) => {
+      const pos = positions[i % positions.length];
+      const starBtn = document.createElement('button');
+      starBtn.type = 'button';
+      starBtn.className = 'wish-star';
+      starBtn.style.top = pos.top + '%';
+      starBtn.style.left = pos.left + '%';
+      starBtn.style.animationDelay = (Math.random() * -2.6) + 's';
+      starBtn.setAttribute('aria-label', wish.title || 'A wish for you');
+      starBtn.innerHTML = `<svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.9L22 9.6l-5.5 4.8L18 22l-6-3.7L6 22l1.5-7.6L2 9.6l7.1-.7L12 2z" fill="currentColor"/></svg>`;
+
+      starBtn.addEventListener('click', () => {
+        if(!starBtn.classList.contains('is-found')){
+          starBtn.classList.add('is-found');
+          foundCount++;
+          hintEl.textContent = foundCount < wishes.length
+            ? foundCount + ' of ' + wishes.length + ' found'
+            : 'all found ✨';
+          if(foundCount === wishes.length){ allFoundPending = true; }
+        }
+        wishTitleEl.textContent = wish.title || '';
+        wishTextEl.textContent = wish.text || '';
+        wishModal.classList.add('is-active');
+      });
+
+      skyEl.appendChild(starBtn);
+    });
+  });
+
   /* ---------- scroll reveal ---------- */
   let io;
   try {
