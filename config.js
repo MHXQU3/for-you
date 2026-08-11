@@ -388,7 +388,7 @@ window.SITE_CONFIG = {
         text: "I wish that this year gives your mind the peace it deserves — fewer nights spent overthinking, fewer things weighing on your heart, and more moments where you can simply exist and feel okay."
       },
       {
-        title: "A wish for her dreams",
+        title: "A wish for your dreams",
         text: "I wish that every dream you've quietly kept to yourself gets a little closer to becoming real. I hope you surprise yourself with just how far you can go."
       },
       {
