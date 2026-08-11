@@ -616,6 +616,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let foundCount = 0;
     let allFoundPending = false;
+    let skyMusicStarted = false;
 
     function closeWishModal(){
       wishModal.classList.remove('is-active');
@@ -644,6 +645,10 @@ document.addEventListener('DOMContentLoaded', () => {
       starBtn.innerHTML = `<svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.9L22 9.6l-5.5 4.8L18 22l-6-3.7L6 22l1.5-7.6L2 9.6l7.1-.7L12 2z" fill="currentColor"/></svg>`;
 
       starBtn.addEventListener('click', () => {
+        if(!skyMusicStarted && skyCfg.song){
+          skyMusicStarted = true;
+          playSong(skyCfg.song, skyCfg.songTitle, null);
+        }
         if(!starBtn.classList.contains('is-found')){
           starBtn.classList.add('is-found');
           foundCount++;

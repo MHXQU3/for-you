@@ -53,7 +53,7 @@ The very first thing she sees is a keypad — `accessCode` in `config.js` is cur
 Near the bottom, above the final message, there's a little bouquet — `bouquet.varieties` in `config.js` is a list of photo paths (matching the files in `assets/images/bouquet/`), and a random one is picked each time the page loads. Tapping it opens it up big, and tapping the envelope beside it reveals `bouquet.letter` and plays `bouquet.song`.
 
 ## 9. The wishing sky
-Six stars scattered over a night sky — `wishingSky.wishes` in `config.js` is a list of `title`/`text` pairs, one per star. Tap a star to reveal its wish; once all six have been found, a final message shows (`wishingSky.completeMessage`).
+Six stars scattered over a night sky — `wishingSky.wishes` in `config.js` is a list of `title`/`text` pairs, one per star. Tapping the very first star starts a song (`wishingSky.song`/`songTitle`) that keeps playing uninterrupted as she taps the rest — it won't restart on later taps. Once all six have been found, a final message shows (`wishingSky.completeMessage`).
 
 ## 10. Preview it locally
 Just open `index.html` in a browser — no build step, no install needed. (Note: audio may not play from a plain double-clicked file in some browsers due to security rules — it'll work correctly once hosted, see below.)

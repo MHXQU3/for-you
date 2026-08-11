@@ -379,6 +379,8 @@ window.SITE_CONFIG = {
   // Six tappable stars scattered over a night sky. Tap a star to reveal a wish;
   // find all of them for a final little surprise message.
   wishingSky: {
+    song: "assets/audio/wishes-song.mp3",
+    songTitle: "Song title — Artist",
     completeMessage: "You found all my wishes for you on this gift ❤️ I have so so many more but if I were to put them all down here, this page would be filled with stars 😭",
     wishes: [
       {
